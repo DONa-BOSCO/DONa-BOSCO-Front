@@ -13,16 +13,17 @@ export const productHandler = {
         let imgContent = imgStringDataSplit[1];
 
         let newProductRequestModel = {
-            "productData": {
-            "title": newProduct.title,
-            "description": newProduct.description,
-            "img": newProduct.img,
-            "category": newProduct.category,
-            "location": newProduct.location,
+            "ProductData": {
+            "Title": newProduct.Title,
+            "Description": newProduct.Description,
+            "Img": newProduct.Img,
+            "Category": newProduct.Category,
+            "Location": newProduct.Location,
+            "State": newProduct.State,
         },
 
         "fileData": {
-            "fileName": updatedProduct.title + "-Photo",
+            "fileName": updatedProduct.Title + "-Photo",
             "base64FileContent": imgContent
         },
 
@@ -49,17 +50,18 @@ export const productHandler = {
         let imgContent = imgStringDataSplit[1];
 
         let updateProductRequestModel = {
-            "productData": {
-            "id": updatedProduct.id,
-            "title": updatedProduct.title,
-            "description": updatedProduct.description,
-            "img": updatedProduct.img,
-            "category": updatedProduct.category,
-            "location": updatedProduct.location,
+            "ProductData": {
+            "Id": updatedProduct.Id,
+            "Title": updatedProduct.Title,
+            "Description": updatedProduct.Description,
+            "Img": updatedProduct.Img,
+            "Category": updatedProduct.Category,
+            "Location": updatedProduct.Location,
+            "State": newProduct.State,
         },
 
         "fileData": {
-            "fileName": updatedProduct.title + "-Photo",
+            "fileName": updatedProduct.Title + "-Photo",
             "base64FileContent": imgContent
         },
         
