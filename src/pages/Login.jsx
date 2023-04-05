@@ -1,13 +1,12 @@
 import React from 'react'
-import Form from 'react-bootstrap/Form';
-
+import { Form, Button } from 'react-bootstrap';
 const Login = () => {
   return ( 
     <>
 
       <form>
         
-      <div class="container">
+      <div class="container mt-5 p-5">
 
         
         <div className="mb-3">
@@ -51,11 +50,8 @@ const Login = () => {
         />
       </Form.Group>
        
-       <div className="d-grid">
-          <button type="añadir cuenta" className="btn btn-primary">
-            Añadir Cuenta
-          </button>
-        </div>
+       
+      <Button variant="danger">Añadir Cuenta</Button>
      
        </div>
       </form>
