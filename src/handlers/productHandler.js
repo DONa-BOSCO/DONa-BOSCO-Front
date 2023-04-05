@@ -14,16 +14,16 @@ export const productHandler = {
 
         let newProductRequestModel = {
             "ProductData": {
-            "Title": newProduct.Title,
-            "Description": newProduct.Description,
-            "Img": newProduct.Img,
-            "Category": newProduct.Category,
-            "Location": newProduct.Location,
-            "State": newProduct.State,
+            "Title": newProduct.title,
+            "Description": newProduct.description,
+            "Img": newProduct.img,
+            "Category": newProduct.category,
+            "Location": newProduct.location,
+            "Condition": newProduct.condition,
         },
 
         "fileData": {
-            "fileName": updatedProduct.Title + "-Photo",
+            "fileName": newProduct.title + "-Photo",
             "base64FileContent": imgContent
         },
 
@@ -51,17 +51,17 @@ export const productHandler = {
 
         let updateProductRequestModel = {
             "ProductData": {
-            "Id": updatedProduct.Id,
-            "Title": updatedProduct.Title,
-            "Description": updatedProduct.Description,
-            "Img": updatedProduct.Img,
-            "Category": updatedProduct.Category,
-            "Location": updatedProduct.Location,
-            "State": newProduct.State,
+            "Id": updatedProduct.id,
+            "Title": updatedProduct.title,
+            "Description": updatedProduct.description,
+            "Img": updatedProduct.img,
+            "Category": updatedProduct.category,
+            "Location": updatedProduct.location,
+            "Condition": newProduct.condition,
         },
 
         "fileData": {
-            "fileName": updatedProduct.Title + "-Photo",
+            "fileName": updatedProduct.title + "-Photo",
             "base64FileContent": imgContent
         },
         
