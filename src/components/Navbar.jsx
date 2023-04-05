@@ -4,9 +4,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-const Header = () => {
+
+
+const Navbar = () => {
   return (
-    <Navbar collapseOnSelect className="Shadow" expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect className="Shadow--navbar" expand="lg" bg="light" variant="light">
       <Container>
       <Navbar.Brand href="#home">
             <img
@@ -23,13 +25,14 @@ const Header = () => {
           </Nav>
 
           <Nav> 
-          <Button className="me-4" variant="danger">Iniciar Sesión</Button></Nav>
+          <Button className="me-4" variant="danger">Iniciar Sesión</Button>
+          </Nav>
           <Nav>
-          <Button variant="danger">Registrar</Button>
+            <Button variant="danger">Registrar</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   )
 }
-export default Header
+export default Navbar
