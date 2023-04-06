@@ -56,7 +56,7 @@ export const router = createBrowserRouter([
 
 async function loaderProduct({ params }) {
     const product = await productHandler.loadProduct(params.id)
-    return { product };
+    return { product, params };
 };
 async function loaderProducts() {
     const products = await productHandler.loadProducts()

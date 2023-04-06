@@ -9,6 +9,7 @@ const apiClient = axios.create({
         Accept: 'application/json'
     }
 })
+
 export const productService = {
     async getProducts() {
         let response = await apiClient.get("/Product/GetAllProduct");
@@ -19,6 +20,7 @@ export const productService = {
         let allProducts = await response.data;
         return allProducts.filter(product => product.producItem.isActive == true);
     },
+
     async getProduct(id) {
         let response = await apiClient.get("/Product/GetProductById?id=" + id);
         if (!response == 200)
@@ -42,6 +44,7 @@ export const productService = {
          } else {
             alert("Upsi...");
          }
+         
     },
     async deleteProduct(id) {
         await apiClient.delete("/Product/DeactivateProduct?id=" + id);

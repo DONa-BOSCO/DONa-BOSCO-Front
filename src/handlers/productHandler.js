@@ -1,8 +1,6 @@
-import { productService } from "../services/productService";
-
+import { productService } from "../services/productService.js";
 
 export const productHandler = {
-
     addProduct(newProduct) {
         if (!newProduct) {
             return;
