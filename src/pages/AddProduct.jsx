@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { productHandler } from '../handlers/productHandler';
-
+import "./Stylesheet/AddProduct.css"
 
 const CreateProduct = () => {
   const [title, setTitle] = useState("");
@@ -58,7 +58,7 @@ const CreateProduct = () => {
 
     <div className="container-form">
       <form onSubmit={handleSubmit} itemID="form1" enctype="multipart/form-data">
-        <h1>Información del Producto</h1>
+        <h1><b>Información del Producto</b></h1>
 
         <div className="mb-3">
           <label htmlFor="title" className="form-label">Nombre</label>
@@ -74,7 +74,7 @@ const CreateProduct = () => {
 
         <div className="mb-3">
           <label className="form-label" htmlFor="condition">Estado del producto</label>
-          <select name="condition" className="form-select" onChange={handleConditionChange} required>
+          <select name="condition" className="form-select form-control" onChange={handleConditionChange} required>
             <option value="">Selecciona una de la 3 opciones</option>
             <option value="nuevo">Nuevo</option>
             <option value="seminuevo">Seminuevo</option>
@@ -84,8 +84,8 @@ const CreateProduct = () => {
 
         <div className="mb-3">
           <label className="form-label" htmlFor="Location">¿Dónde se encuentra el producto?</label>
-          <select name="Location" className="form-select" onChange={handleLocationChange} required>
-            <option value="">Seleccionar provincia</option>
+          <select name="Location" className="form-select form-control" onChange={handleLocationChange} required>
+            <option value="">Selecciona la provincia</option>
             <option value="Álava">Álava</option>
             <option value="Albacete">Albacete</option>
             <option value="Alicante">Alicante</option>
@@ -143,8 +143,8 @@ const CreateProduct = () => {
         </div>
         <div className="mb-3">
           <label className="form-label" htmlFor="category">Categoría</label>
-          <select name="category" className="form-select" onChange={handleCategoryChange} required>
-            <option value="">Selecciona la categoría del producto</option>
+          <select name="category" className="form-select form-control" onChange={handleCategoryChange} required>
+            <option value="">Selecciona la categoría </option>
             <option value="Ropa y accesorios">Ropa y accesorios</option>
             <option value="electrodomesticos">Electrodomésticos</option>
             <option value="Informatica y electrónica">Dispositivos electrónicos</option>
@@ -162,7 +162,7 @@ const CreateProduct = () => {
           <input name="img" type="file" className="form-control" placeholder="Upload a picture" onChange={handleImgChange} required />
         </div>
 
-        <button type="submit" className="btn btn-primary" id="btn" onClick={handleShow}>Subir</button>
+        <button type="submit" className="btn btn-custom" id="btn" onClick={handleShow}>Subir</button>
       </form>
     </div>
 
