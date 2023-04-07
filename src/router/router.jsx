@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
                 loader: loaderProducts,
             },
             {
-                path: '/dashboarduser',
+                path: '/dashboardadmin',
                 element: <DashboardAdmin />,
                 loader: loaderProducts,
             },

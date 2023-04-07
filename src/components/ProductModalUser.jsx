@@ -64,6 +64,7 @@ const ProductModalUser = ({ show, handleClose, productModal }) => {
           </Table>
           <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <Link to={`/Cart`}>
+              {/* HAY QUE MODIFICAR ESTO */}
               <Button variant="light" onClick={() => addToCart(product)}><BsCart3 /> Reservar</Button>
             </Link>
           </div>
