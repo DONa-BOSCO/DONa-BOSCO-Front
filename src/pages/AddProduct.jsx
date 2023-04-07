@@ -146,14 +146,14 @@ const CreateProduct = () => {
           <select name="category" className="form-select form-control" onChange={handleCategoryChange} required>
             <option value="">Selecciona la categoría </option>
             <option value="Ropa y accesorios">Ropa y accesorios</option>
-            <option value="electrodomesticos">Electrodomésticos</option>
+            <option value="Electrodomesticos">Electrodomésticos</option>
             <option value="Informatica y electrónica">Dispositivos electrónicos</option>
             <option value="Deporte y ocio">Deporte y ocio</option>
-            <option value="videojuegos y videojuegos"> videojuegos y juegos</option>
-            <option value="cine, libros y musica">cine, libros y música</option>.
+            <option value="Videojuegos y videojuegos"> Videojuegos y juegos</option>
+            <option value="Cine, libros y musica">Cine, libros y música</option>.
             <option value="Hogar y jardín">Hogar y jardín</option>
-            <option value="articulos infantiles">Artículos infantiles</option>
-            <option value="otros">otros</option>
+            <option value="Articulos infantiles">Artículos infantiles</option>
+            <option value="Otros">Otros</option>
           </select>
         </div>
 

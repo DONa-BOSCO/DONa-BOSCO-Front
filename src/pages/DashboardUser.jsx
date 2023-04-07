@@ -10,29 +10,25 @@ import { productService } from "../services/productService.js";
 function Dashboard() {
 
   const [productsData, setProductsData] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
   };
+
   const data = productsData.filter((product) => {
-   
     const lowerCaseCategory = product.producItem.category.toLowerCase();
     const isCategoryMatch = selectedCategory ? lowerCaseCategory === selectedCategory.toLowerCase() : true;
-    const isSearchMatch = product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.producItem.price == searchQuery;
-    return isCategoryMatch && isSearchMatch;
+    return isCategoryMatch;
   });
 
   const [show, setShow] = useState(false);
   const [productModal, setProductModal] = useState({});
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
-    setProductModal(productsData.find(product => product.producItem.id == productId));
-    
+    setProductModal(productsData.find(product => product.producItem.id == productId));  
     setShow(true)
   };
-
 
   async function getProducts() {
     var resultList = await productService.getProducts();
@@ -56,14 +52,23 @@ function Dashboard() {
 
   return (
     <>
-   <div className="container-gn" id="text">
+      <div className="container-gn" id="text">
         <br />
-      <h1> Todos los Productos </h1>
-      <div className="container-bar">
-        <input className="searchStyle" type="text" placeholder="🔍 Search by product name or price"
-          value={searchQuery}
-          onChange={handleSearchChange}
-          />
+        <h1> Todos los Productos </h1>
+        <div className="container-bar">
+          <label htmlFor="category-select"></label>
+          <select id="category-select" onChange={handleCategoryChange}>
+          <option value="">Selecciona por categoría </option>
+          <option value="Ropa y accesorios">Ropa y accesorios</option>
+            <option value="Electrodomesticos">Electrodomésticos</option>
+            <option value="Informatica y electrónica">Dispositivos electrónicos</option>
+            <option value="Deporte y ocio">Deporte y ocio</option>
+            <option value="Videojuegos y videojuegos"> Videojuegos y juegos</option>
+            <option value="Cine, libros y musica">Cine, libros y música</option>.
+            <option value="Hogar y jardín">Hogar y jardín</option>
+            <option value="Articulos infantiles">Artículos infantiles</option>
+            <option value="Otros">Otros</option>
+          </select>
         </div>
 
 
