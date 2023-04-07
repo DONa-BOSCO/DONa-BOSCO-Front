@@ -10,25 +10,29 @@ import { productService } from "../services/productService.js";
 function Dashboard() {
 
   const [productsData, setProductsData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
   };
-
   const data = productsData.filter((product) => {
-    const isCategoryMatch =
-      selectedCategory === "" || product.category === selectedCategory;
-    return isCategoryMatch;
+   
+    const lowerCaseCategory = product.producItem.category.toLowerCase();
+    const isCategoryMatch = selectedCategory ? lowerCaseCategory === selectedCategory.toLowerCase() : true;
+    const isSearchMatch = product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) || product.producItem.price == searchQuery;
+    return isCategoryMatch && isSearchMatch;
   });
 
   const [show, setShow] = useState(false);
   const [productModal, setProductModal] = useState({});
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
-    setProductModal(productsData.find((product) => product.id === productId));
-    setShow(true);
+    setProductModal(productsData.find(product => product.producItem.id == productId));
+    
+    setShow(true)
   };
+
 
   async function getProducts() {
     var resultList = await productService.getProducts();
@@ -52,16 +56,13 @@ function Dashboard() {
 
   return (
     <>
-      <div className="container-gn" id="text">
+   <div className="container-gn" id="text">
         <br />
-        <h1> <b>Todos los Productos</b></h1>
-        <div className="container-bar">
-          <input
-            className="searchStyle"
-            type="text"
-            placeholder="Busca por categoría"
-            value={selectedCategory}
-            onChange={handleCategoryChange}
+      <h1> Todos los Productos </h1>
+      <div className="container-bar">
+        <input className="searchStyle" type="text" placeholder="🔍 Search by product name or price"
+          value={searchQuery}
+          onChange={handleSearchChange}
           />
         </div>
 
