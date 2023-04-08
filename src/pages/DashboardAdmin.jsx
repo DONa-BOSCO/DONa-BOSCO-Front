@@ -8,7 +8,7 @@ import './Stylesheet/DashboardAdmin.css'
 import ProductModalAdm from "../components/ProductModalAdm";
 import ButtonNewProduct from '../components/ButtonNewProduct';
 import Modal from 'react-bootstrap/Modal';
-// import EditProduct from "../components/EditProduct";
+import EditProduct from '../pages/EditProduct';
 import { productService } from "../services/productService";
 
 
@@ -89,7 +89,7 @@ function Dashboard() {
               {data.map((product) => {
                 return (
                   <React.Fragment key={product.producItem.id}>
-                    {/* <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal}/>  */}
+                    <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal}/> 
                     <ProductModalAdm show={show} handleClose={handleClose} productModal={productModal} />
                     <Card border="light" style={{ width: '18rem' }}>
                       <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
@@ -100,7 +100,7 @@ function Dashboard() {
                         <Card.Subtitle className="mb-2 text-muted">{product.producItem.condition}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">{product.producItem.location}</Card.Subtitle>
                         <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
-                        {/* <Link to={`editProduct/${product.producItem.id}`}> <Button variant="light" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare/> Edit </Button> </Link>  */}
+                        <Link to={`/dashboardadmin/editProduct/${product.producItem.id}`}> <Button variant="light" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare/> Edit </Button> </Link> 
                         <Button variant="light" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Eliminar </Button>
                       </Card.Body>
                     </Card>

@@ -50,7 +50,7 @@ export const productService = {
         await apiClient.delete("/Product/DeactivateProduct?id=" + id);
     },
     async updateProduct(updatedProductRequestModel){
-        console.log(updatedProductRequestModel);
+       
        let response = await apiClient.patch("/Product/UpdateProduct", updatedProductRequestModel)
        if(response.status === 200)
         {

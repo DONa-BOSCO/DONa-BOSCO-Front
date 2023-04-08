@@ -9,10 +9,10 @@ function MyComponent() {
     }
     
     return (
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', marginTop: '30px', marginBottom: '30px' }}>
       <button
         type="submit"
-        className="btn btn-primary"
+        className="btn btn-custom"
         id="btn-ad"
         onClick={handleClick}
       >

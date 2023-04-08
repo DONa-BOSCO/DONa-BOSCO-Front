@@ -28,8 +28,9 @@ export const router = createBrowserRouter([
                 element: <AddProduct />,
             },
             {
-                path: '/editproduct',
+                path: "/dashboardadmin/editProduct/:id",
                 element: <EditProduct />,
+                loader: loaderProduct, 
             },
             {
                 path: '/join',
@@ -55,8 +56,8 @@ export const router = createBrowserRouter([
 ])
 
 async function loaderProduct({ params }) {
-    const product = await productHandler.loadProduct(params.id)
-    return { product, params };
+    const Product = await productHandler.loadProduct(params.id)
+    return { Product, params };
 };
 async function loaderProducts() {
     const products = await productHandler.loadProducts()
