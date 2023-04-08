@@ -9,18 +9,18 @@ function MyComponent() {
     }
     
     return (
-      <div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-          id="btn-ad"
-          onClick={handleClick}
-        >
-          Add New Product
-        </button>
-        
-        <a href={link} className="text-reset"></a>
-      </div>
+      <div style={{ textAlign: 'center' }}>
+      <button
+        type="submit"
+        className="btn btn-primary"
+        id="btn-ad"
+        onClick={handleClick}
+      >
+        Añadir producto
+      </button>
+
+      <a href={link} className="text-reset"></a>
+    </div>
     );
   }
 

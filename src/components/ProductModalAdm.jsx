@@ -43,7 +43,7 @@ const ProductModalAdm = ({ show, handleClose, productModal, handleUpdate }) => {
     return (
         <Modal className='d-flex justify-content-center' show={show} onHide={handleClose} size="lg">
             <Modal.Header closeButton>
-            <h3 className='text-center' style={{ width: '100%' }}>Usuario, valoraciones y chat</h3>
+            <h3 className='text-center' style={{ width: '100%' }}>Usuario y valoraciones </h3>
             </Modal.Header>
             <Modal.Body>
             <div id="modal" className="modal-body" style={{ width: '100%' }}>
@@ -69,10 +69,10 @@ const ProductModalAdm = ({ show, handleClose, productModal, handleUpdate }) => {
                             </tr>
                         </tbody>
                     </Table>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+                    {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                         <Button variant="light" onClick={() => handleUpdate()}><BsPencilSquare /> Editar </Button>
                         <Button variant="light" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Eliminar </Button>
-                    </div>
+                    </div> */}
                     <Modal show={showConfirmation} onHide={handleCloseConfirmation} className="my-modal">
                         <Modal.Header closeButton>
                             <Modal.Title>Confirma eliminar</Modal.Title>

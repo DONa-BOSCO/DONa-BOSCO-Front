@@ -37,7 +37,7 @@ export const productService = {
         {
             Swal.fire({
             icon: 'success',
-            title: 'New product added',
+            title: 'Nuevo producto añadido',
             showConfirmButton: true,
             showClass: { popup: 'animate__animated animate__fadeInDown' },
             hideClass: { popup: 'animate__animated animate__fadeOutUp' } })
@@ -56,7 +56,7 @@ export const productService = {
         {
             Swal.fire({
             icon: 'success',
-            title: 'Product updated',
+            title: 'el producto ha sido actualizado',
             showConfirmButton: true,
             showClass: { popup: 'animate__animated animate__fadeInDown' },
             hideClass: { popup: 'animate__animated animate__fadeOutUp' } })
