@@ -42,7 +42,7 @@ export const productHandler = {
             return;
         }
 
-        let imgStringData = newProduct.img;
+        let imgStringData = updatedProduct.img;
         let imgStringDataSplit = imgStringData.split(',');
         let imgContent = imgStringDataSplit[1];
 

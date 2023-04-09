@@ -8,7 +8,7 @@ import './Stylesheet/DashboardAdmin.css'
 import ProductModalAdm from "../components/ProductModalAdm";
 import ButtonNewProduct from '../components/ButtonNewProduct';
 import Modal from 'react-bootstrap/Modal';
-import EditProduct from '../pages/EditProduct';
+import EditProduct from '../components/EditProduct';
 import { productService } from "../services/productService";
 
 

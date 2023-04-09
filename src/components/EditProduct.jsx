@@ -12,66 +12,52 @@ const EditProduct = ({handleOpenModal, handleCloseModal, product}) => {
     // Form-related 
 
     const [title, setTitle] = useState(products.title);
-    const [price, setPrice] = useState(products.price);
     const [description, setDescription] = useState(products.description);
     const [img, setImg] = useState(products.img);
-    const [units, setUnits] = useState(products.units);
-    const [material, setMaterial] = useState(products.material);
-    const [pattern, setPattern] = useState(products.pattern);
+    const [condition, setCondition] = useState(products.condition);
+    const [location, setLocation] = useState(products.location);
     const [category, setCategory] = useState(products.category);
-    const [season, setSeason] = useState(products.season);
+
 
     
-  const handleTitleChange = (event) => {
-    let titleInput = event.target.value; 
-    setTitle(titleInput);
-  };
-  const handlePriceChange = (event) => {
-    let priceInput = event.target.value; 
-    setPrice(priceInput);
-  };
-  const handleDescriptionChange = (event) => {
-    let descriptionInput = event.target.value; 
-    setDescription(descriptionInput);
-  };
-
-  const handleMaterialChange = (event) => {
-    let materialInput = event.target.value; 
-    setMaterial(materialInput);
-  };
-
-  const handlePatternChange = (event) => {
-    let patternInput = event.target.value; 
-    setPattern(patternInput);
-  };
-
-  const handleCategoryChange = (event) => {
-    let categoryInput = event.target.value; 
-    setCategory(categoryInput);
-  };
-
-  const handleSeasonChange = (event) => {
-    let seasonInput = event.target.value; 
-    setSeason(seasonInput);
-  };
-
-  const handleUnitsChange = (event) => {
-    let unitsInput = event.target.value; 
-    setUnits(unitsInput);
-  };
-
-  const handleImgChange = (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      setImg(reader.result)
-    };
-  };
+    const handleTitleChange = (event) => {
+        let titleInput = event.target.value;
+        setTitle(titleInput);
+      };
+    
+      const handleDescriptionChange = (event) => {
+        let descriptionInput = event.target.value;
+        setDescription(descriptionInput);
+      };
+    
+      const handleConditionChange = (event) => {
+        let conditionInput = event.target.value;
+        setCondition(conditionInput);
+      };
+    
+      const handleLocationChange = (event) => {
+        let locationInput = event.target.value;
+        setLocation(locationInput);
+      };
+    
+      const handleCategoryChange = (event) => {
+        let categoryInput = event.target.value;
+        setCategory(categoryInput);
+      };
+    
+      const handleImgChange = (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => {
+          setImg(reader.result)
+        };
+      };
+    
 
   const handleUpdate = (event) => {
     event.preventDefault();
-    let updatedProduct = { title, description, price, img, units, material, pattern, category, season };
+    let updatedProduct = { title, description, img, condition, location, category };
     productHandler.updateProduct(id, updatedProduct);
     event.target.reset()
   };
@@ -88,7 +74,7 @@ const EditProduct = ({handleOpenModal, handleCloseModal, product}) => {
 
     return (
         <>
-  
+     
         <Modal
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -118,30 +104,23 @@ const EditProduct = ({handleOpenModal, handleCloseModal, product}) => {
                     </Form.Group>
                 </Row>
                 <Row className="mb-3">
+            
                     <Form.Group as={Col} className="mb-3">
-                        <Form.Label> Price </Form.Label>
-                        <Form.Control
-                            type="number"
-                            name="price"
-                            placeholder={products.price}
-                            onChange={handlePriceChange} />
-                    </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
-                        <Form.Label> Material </Form.Label>
+                        <Form.Label> Estado del producto </Form.Label>
                         <Form.Select
                             type="text"
                             name="material"
                             placeholder={products.material}
-                            onChange={handleMaterialChange}>
+                            onChange={handleConditionChange}>
                         </Form.Select>
                     </Form.Group>
                     <Form.Group as={Col} className="mb-3">
-                        <Form.Label> Pattern </Form.Label>
+                        <Form.Label> Dónde se encuentra el producto? </Form.Label>
                         <Form.Control
                             type="text"
                             name="pattern"
                             placeholder={products.pattern}
-                            onChange={handlePatternChange} />
+                            onChange={handleLocationChange} />
                     </Form.Group>
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Category</Form.Label>
@@ -153,22 +132,7 @@ const EditProduct = ({handleOpenModal, handleCloseModal, product}) => {
                     </Form.Group>
                 </Row>
                 <Row className="mb-3">
-                    <Form.Group as={Col} className="mb-3">
-                        <Form.Label> Season </Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="season"
-                            placeholder={products.season}
-                            onChange={handleSeasonChange} />
-                    </Form.Group>
-                    <Form.Group as={Col} className="mb-3">
-                        <Form.Label> Units </Form.Label>
-                        <Form.Control
-                            type="number"
-                            name="units"
-                            placeholder={products.units}
-                            onChange={handleUnitsChange} />
-                    </Form.Group>
+                   
                     <Form.Group as={Col} className="mb-3">
                         <Form.Label> Image </Form.Label>
                         <Form.Control
