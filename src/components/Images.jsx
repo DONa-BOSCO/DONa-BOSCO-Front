@@ -6,10 +6,6 @@ function Images() {
 
     let [imgsBase64Array, setImgsBase64Array] = useState([]);
 
-    // async function loadImgsBase64Array() {
-    //     let loadedBase64Imgs = await productHandler.loadProductsBase64Array();
-    //     setImgsBase64Array(loadedBase64Imgs);
-    // }
     function buildImgSrcFromBase64Model(extension, content) {
         return "data:" + extension + ";base64," + content;
     }

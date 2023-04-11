@@ -57,17 +57,18 @@ function Dashboard() {
         <h1> Todos los Productos </h1>
         <div className="container-bar">
           <label htmlFor="category-select"></label>
-          <select id="category-select" onChange={handleCategoryChange}>
+          <select id="category-select" className="btn btn-custom"onChange={handleCategoryChange}>
           <option value="">Selecciona por categoría </option>
           <option value="Ropa y accesorios">Ropa y accesorios</option>
             <option value="Electrodomesticos">Electrodomésticos</option>
-            <option value="Informatica y electrónica">Dispositivos electrónicos</option>
+            <option value="Informatica y electrónica">Informatica y electrónica</option>
             <option value="Deporte y ocio">Deporte y ocio</option>
             <option value="Videojuegos y videojuegos"> Videojuegos y juegos</option>
             <option value="Cine, libros y musica">Cine, libros y música</option>.
             <option value="Hogar y jardín">Hogar y jardín</option>
             <option value="Articulos infantiles">Artículos infantiles</option>
             <option value="Otros">Otros</option>
+            <option value="">Todos los productos</option>
           </select>
         </div>
 
