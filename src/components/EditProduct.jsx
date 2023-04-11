@@ -9,8 +9,6 @@ const EditProduct = ({handleOpenModal, handleCloseModal, product}) => {
     const { products } = useLoaderData();
     const id = products.id;
 
-    // Form-related 
-
     const [title, setTitle] = useState(products.title);
     const [description, setDescription] = useState(products.description);
     const [img, setImg] = useState(products.img);
@@ -62,15 +60,6 @@ const EditProduct = ({handleOpenModal, handleCloseModal, product}) => {
     event.target.reset()
   };
 
-//   const handleUpdate = async (updatedProduct) => {
-      
-//     handleOpenModal();
-
-//     if (!updatedProduct) {
-//         return;
-//     }
-//     setUpdatedProduct(updatedProduct);
-//     }
 
     return (
         <>

@@ -81,7 +81,7 @@ function Dashboard() {
 
                 <ProductModalUser show={show} handleClose={handleClose} productModal={productModal} />
                 <Card border="light" style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
+                  <Card.Img className="card-img" variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                   <Card.Body>
                     <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
                       <Card.Title style={{ marginRight: '1rem' }}><b>{product.producItem.title}</b></Card.Title>

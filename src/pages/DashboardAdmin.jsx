@@ -84,7 +84,7 @@ function Dashboard() {
                 <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal}/> 
                 <ProductModalAdm show={show} handleClose={handleClose} productModal={productModal} />
                 <Card border="light" style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
+                  <Card.Img  variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                   <Card.Body>
                     <Card.Title>{product.producItem.title} </Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{product.producItem.category}</Card.Subtitle>
