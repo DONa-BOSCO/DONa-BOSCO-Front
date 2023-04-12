@@ -1,8 +1,6 @@
-import { productService } from "../services/productService";
-
+import { productService } from "../services/productService.js";
 
 export const productHandler = {
-
     addProduct(newProduct) {
         if (!newProduct) {
             return;
@@ -13,25 +11,24 @@ export const productHandler = {
         let imgContent = imgStringDataSplit[1];
 
         let newProductRequestModel = {
-            "ProductData": {
-            "Title": newProduct.title,
-            "Description": newProduct.description,
-            "Img": newProduct.img,
-            "Category": newProduct.category,
-            "Location": newProduct.location,
-            "Condition": newProduct.condition,
-        },
+            "productData": {
+                "title": newProduct.title,
+                "description": newProduct.description,
+                "category": newProduct.category,
+                "location": newProduct.location,
+                "condition": newProduct.condition,
+            },
 
-        "fileData": {
-            "fileName": newProduct.title + "-Photo",
-            "base64FileContent": imgContent
-        },
+            "fileData": {
+                "fileName": newProduct.title + "-Photo",
+                "base64FileContent": imgContent
+            },
 
         }
         return productService.submitProduct(newProductRequestModel);
     },
     async loadProducts() {
-        let result = await productService.getProducts();
+        var result = await productService.getProducts();
         return result;
     },
     loadProduct(id) {
@@ -45,26 +42,25 @@ export const productHandler = {
             return;
         }
 
-        let imgStringData = newProduct.img;
+        let imgStringData = updatedProduct.img;
         let imgStringDataSplit = imgStringData.split(',');
         let imgContent = imgStringDataSplit[1];
 
         let updateProductRequestModel = {
-            "ProductData": {
-            "Id": updatedProduct.id,
-            "Title": updatedProduct.title,
-            "Description": updatedProduct.description,
-            "Img": updatedProduct.img,
-            "Category": updatedProduct.category,
-            "Location": updatedProduct.location,
-            "Condition": newProduct.condition,
-        },
+            "productData": {
+                "id": updatedProduct.id,
+                "title": updatedProduct.title,
+                "description": updatedProduct.description,
+                "category": updatedProduct.category,
+                "location": updatedProduct.location,
+                "condition": updatedProduct.condition,
+            },
 
-        "fileData": {
-            "fileName": updatedProduct.title + "-Photo",
-            "base64FileContent": imgContent
-        },
-        
+            "fileData": {
+                "fileName": updatedProduct.title + "-Photo",
+                "base64FileContent": imgContent
+            },
+
         }
         return productService.updateProduct(updateProductRequestModel);
     }

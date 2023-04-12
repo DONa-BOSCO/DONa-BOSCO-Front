@@ -9,6 +9,7 @@ const apiClient = axios.create({
         Accept: 'application/json'
     }
 })
+
 export const productService = {
     async getProducts() {
         let response = await apiClient.get("/Product/GetAllProduct");
@@ -19,6 +20,7 @@ export const productService = {
         let allProducts = await response.data;
         return allProducts.filter(product => product.producItem.isActive == true);
     },
+
     async getProduct(id) {
         let response = await apiClient.get("/Product/GetProductById?id=" + id);
         if (!response == 200)
@@ -35,25 +37,26 @@ export const productService = {
         {
             Swal.fire({
             icon: 'success',
-            title: 'New product added',
+            title: 'Nuevo producto añadido',
             showConfirmButton: true,
             showClass: { popup: 'animate__animated animate__fadeInDown' },
             hideClass: { popup: 'animate__animated animate__fadeOutUp' } })
          } else {
             alert("Upsi...");
          }
+         
     },
     async deleteProduct(id) {
         await apiClient.delete("/Product/DeactivateProduct?id=" + id);
     },
     async updateProduct(updatedProductRequestModel){
-        console.log(updatedProductRequestModel);
+       
        let response = await apiClient.patch("/Product/UpdateProduct", updatedProductRequestModel)
        if(response.status === 200)
         {
             Swal.fire({
             icon: 'success',
-            title: 'Product updated',
+            title: 'el producto ha sido actualizado',
             showConfirmButton: true,
             showClass: { popup: 'animate__animated animate__fadeInDown' },
             hideClass: { popup: 'animate__animated animate__fadeOutUp' } })
