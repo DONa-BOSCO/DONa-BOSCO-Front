@@ -21,10 +21,10 @@ export const userHandler = {
                 "phoneNumber": newUser.phoneNumber,
             },
 
-            "fileData": {
-                "fileName": newUser.fullName + "-Photo",
-                "base64FileContent": imgContent
-            }
+            // "fileData": {
+            //     "fileName": newUser.fullName + "-Photo",
+            //     "base64FileContent": imgContent
+            // }
 
         }
 
