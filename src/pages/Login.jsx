@@ -64,7 +64,7 @@ const Login = () => {
           <Form.Check type="checkbox" label="Recordar mis datos" onChange={handleRememberMeChange} />
         </Form.Group>
         <div className="d-flex justify-content-center">
-          <Button variant="danger" type="submit">
+          <Button className="btn btn-custom" type="submit">
             Iniciar Sesión
           </Button>
         </div>

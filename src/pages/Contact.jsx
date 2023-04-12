@@ -74,7 +74,7 @@ const Contact = () => {
         </Form.Group>
 
         <div className="d-flex justify-content-center">
-          <Button variant="danger" type="submit">
+          <Button className="btn btn-custom" type="submit">
             Enviar mensaje
           </Button>
         </div>
