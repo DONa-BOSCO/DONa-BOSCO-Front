@@ -7,7 +7,7 @@ import '../components/stylesheet/Footer.css'
 function Footer() {
   return (
     <>
-      <Navbar className="footer fixed-bottom">
+      <Navbar className="footer">
         <Container>
           <Navbar.Brand>Copyright© 2023 - DONa BOSCO</Navbar.Brand>
           <Nav>
