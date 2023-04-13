@@ -3,7 +3,9 @@ import Slide from"../components/Slide"
 import './Stylesheet/Home.css'
 
 
+
 const Home = () => {
+ 
   return (
     <>
     <Slide/>
@@ -13,6 +15,9 @@ const Home = () => {
     <br />
     Fácil, rápido y sin moverte del sofá.</h1>
     </div>
+    <div className="home--search">
+    <input className="searchinput" type="text" placeholder="Busca por categorias"/>
+    </div>    
     </>
  
     

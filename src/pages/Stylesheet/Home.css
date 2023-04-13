@@ -2,8 +2,25 @@
     display: flex;
     justify-content: center;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
 }
 h1{
    font-weight:bold;
+}
+
+.home--search{
+    display: flex;
+    justify-content: center;
+}
+.searchinput{
+
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #DC001B;
+    width: 42vw;
+    padding: 7px;
+    position: sticky;
+    top: .5rem;
+    margin-right: 5px;
+    
 }
