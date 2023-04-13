@@ -12,12 +12,11 @@ export const userHandler = {
 
         let newUserRequestModel = {
             "userData": {
-                "rol": 2,
+            
                 "fullName": newUser.fullName,
                 "nickName": newUser.nickName,
                 "email": newUser.email,
                 "password": newUser.password,
-                "age": newUser.age,
                 "phoneNumber": newUser.phoneNumber,
             },
 
@@ -57,7 +56,6 @@ export const userHandler = {
                 "nickName": updatedProduct.nickName,
                 "email": updatedProduct.email,
                 "password": updatedProduct.password,
-                "age": updatedProduct.age,
                 "phoneNumber": updatedProduct.phoneNumber,
             },
             "fileData": {
