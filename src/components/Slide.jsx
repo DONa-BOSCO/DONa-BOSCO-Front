@@ -1,8 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
-import slide1 from "../assets/img-slide/slide1.jpg"
-import slide2 from "../assets/img-slide/slide2.jpg"
-import slide3 from "../assets/img-slide/slide3.jpg"
-import slide4 from "../assets/img-slide/slide4.jpg"
+import slide1 from "../assets/img-slide/slide1.png"
+import slide2 from "../assets/img-slide/slide2.png"
+import slide3 from "../assets/img-slide/slide3.png"
+import slide4 from "../assets/img-slide/slide4.png"
 
 function Slide() {
   return (
@@ -14,8 +14,8 @@ function Slide() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Texto</h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -26,8 +26,8 @@ function Slide() {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Texto</h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -38,10 +38,8 @@ function Slide() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Texto</h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -52,10 +50,8 @@ function Slide() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Texto</h3>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
