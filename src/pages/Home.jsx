@@ -1,5 +1,6 @@
 import React from 'react'
 import Slide from"../components/Slide"
+import Slick from '../components/Slick'
 import './Stylesheet/Home.css'
 
 
@@ -17,7 +18,10 @@ const Home = () => {
     </div>
     <div className="home--search">
     <input className="searchinput" type="text" placeholder="Busca por categorias"/>
-    </div>    
+    </div>
+    
+   <Slick/>
+
     </>
  
     
