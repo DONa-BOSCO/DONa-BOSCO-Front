@@ -23,9 +23,9 @@ const Header = () => {
           </Nav>
 
           <Nav> 
-          <Button className="me-4" variant="danger">Iniciar Sesión</Button></Nav>
+          <Button className="me-4" variant="btn btn-custom">Iniciar Sesión</Button></Nav>
           <Nav>
-          <Button variant="danger">Registrar</Button>
+          <Button variant="btn btn-custom">Registrar</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
