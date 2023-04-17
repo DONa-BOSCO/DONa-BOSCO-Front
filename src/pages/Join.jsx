@@ -8,7 +8,7 @@ const Join = () => {
         <Form>
           <div className="mb-3">
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="Nombre y Apellido" placeholder="nombre y apellido"required />
+            <Form.Control type="text" placeholder="nombre y apellido"required />
           </div>
           <div className="mb-3">
             <Form.Label>Nombre de Usuario</Form.Label>
