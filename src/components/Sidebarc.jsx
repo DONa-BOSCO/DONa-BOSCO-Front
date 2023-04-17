@@ -8,22 +8,22 @@ const Sidebarc = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="bg-danger col-md-2 col-5 min-vh-100 d-flex flex-column">
-        <hr />
-          <Nav.Link href="/mi-perfil" className="text-dark sm-5">
+        <div className="bg-danger col-3 min-vh-100 d-flex flex-column flex-grow-0">
+          <hr />
+          <Nav.Link href="/mi-perfil" className="text-dark fs-5 fs-md-4 fs-lg-3 mb-5">
             <i className="bi bi-speedometer2"></i>
-            <BsFillPersonFill />
-            <span className="ms-2">Mi Perfil</span>
+           <center> <BsFillPersonFill />
+            <span className="ms-2">Mi Perfil</span></center>
           </Nav.Link>
-          <Nav.Link href="/productos" className="text-dark sm-5">
+          <Nav.Link href="/productos" className="text-dark fs-5 fs-md-4 fs-lg-3 mb-5">
             <i className="bi bi-house"></i>
-            <AiOutlineTags />
-            <span className="ms-2">Por Donar</span>
+            <center> <AiOutlineTags />
+            <span className="ms-2">Por Donar</span></center>
           </Nav.Link>
-          <Nav.Link href="/ya-donados" className="text-dark sm-5">
+          <Nav.Link href="/ya-donados" className="text-dark fs-5 fs-md-4 fs-lg-3 mb-5">
             <i className="bi bi-table"></i>
-            <AiOutlineHeart />
-            <span className="ms-2">Donados</span>
+            <center><AiOutlineHeart />
+            <span className="ms-2">Donados</span></center>
           </Nav.Link>
         </div>
       </div>
