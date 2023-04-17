@@ -1,11 +1,11 @@
 .footer{
     
     background-color: #51626f;
-    justify-content: space-around;
     height:auto;
     width:100% ;  
-   
-
-
-
 }
+
+.footer-content > div:first-child {
+    margin-right: 1rem;
+  }
+  
