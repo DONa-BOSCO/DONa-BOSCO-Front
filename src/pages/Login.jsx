@@ -26,7 +26,7 @@ const Login = () => {
   };
 
   return (
-    <Container className="d-flex justify-content-center mt-5 prueba" style={{ marginTop: "20px", marginBottom: "20px" }}>
+    <Container className="d-flex justify-content-center mt-5 entrar" style={{ marginTop: "20px", marginBottom: "20px" }}>
       <Form onSubmit={handleSubmit} style={{ width: "500px" }}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
