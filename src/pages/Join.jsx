@@ -8,19 +8,19 @@ const Join = () => {
         <Form>
           <div className="mb-3">
             <Form.Label>Nombre y Apellido</Form.Label>
-            <Form.Control type="Nombre y Apellido" placeholder="nombre y apellido" />
+            <Form.Control type="Nombre y Apellido" placeholder="nombre y apellido"required />
           </div>
           <div className="mb-3">
             <Form.Label>Nombre de Usuario</Form.Label>
-            <Form.Control type="Nombre de Usuario" placeholder="nombre de usuario" />
+            <Form.Control type="text" placeholder="nombre de usuario"required />
           </div>
           <div className="mb-3">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="Email" placeholder="email" />
+            <Form.Control type="Email" placeholder="email"required />
           </div>
           <div className="mb-3">
             <Form.Label>Contraseña</Form.Label>
-            <Form.Control type="Contraseña" placeholder="contraseña" />
+            <Form.Control type="password" placeholder="contraseña"required />
           </div>
           <Form.Group className="mb-3">
             <Form.Check

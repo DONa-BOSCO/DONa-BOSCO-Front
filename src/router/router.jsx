@@ -9,7 +9,8 @@ import Join from '../pages/Join'
 import Login from '../pages/Login'
 import DashboardUser from '../pages/DashboardUser'
 import DashboardAdmin from '../pages/DashboardAdmin'
-import Contact from "../pages/Contact";
+import Contact from "../pages/Contact"
+import Sidebar from '../pages/Sidebar'
 
 
 export const router = createBrowserRouter([
@@ -56,6 +57,11 @@ export const router = createBrowserRouter([
                 element: <Contact />,
                 
             },
+            {
+                path: '/sidebar',
+                element: <Sidebar />,
+                
+            }
             
         ]
     }
