@@ -77,7 +77,7 @@
 <p align="center"> - Texto </p>  
 
 
-<h2 align="center"> 👩‍ 💻Group members:</h2>
+<h2> 👩‍ 💻Group members:</h2>
 
 
 
