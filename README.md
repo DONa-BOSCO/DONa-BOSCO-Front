@@ -9,14 +9,14 @@
 
 <h2 align="center"> :busts_in_silhouette:  Mission & Team </h2>
  
-  <p align="center"> texo.</p>
+  <p align="center"> texto.</p>
    <p align="center">texto.</p>
 
 
  <h2 align="center"> :memo:  Projet Description: </h2>
  
 <p align="center"></p>
- <p align="center"> texto!</p>
+ <p align="center"> texto.</p>
 
 <p align="center">texto.</p>
  
@@ -68,13 +68,13 @@
 <p align="center">- Pair Programming.</p>
 
 <h2 align="center"> 👀  Testing:</h2>
-<p align="center"> Tested renderizaion of components (Search tool bar) and pages (AdmDashboard) </p> 
-<p align="center"> Try running npm run test </p> 
+<p align="center"> Texto </p> 
+<p align="center"> Texto </p> 
 <h2 align="center">  🧪Next Steps:</h2>
 
-<p align="center"> - Set up a functional Login service </p>
-<p align="center"> - Improve validation process and security service as a whole </p> 
-<p align="center"> - Implement categories filter in the navigation sidebar </p>  
+<p align="center"> - Texto </p>
+<p align="center"> - Texto </p> 
+<p align="center"> - Texto </p>  
 
 
 <h2 align="center"> 👩‍ 💻Group members:</h2>
