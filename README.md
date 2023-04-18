@@ -81,9 +81,9 @@
 
 
 
-|<img src="https://user-images.githubusercontent.com/117834362/226867726-d41a6307-9121-48bf-9083-acbb2da7db5e.jpg" width=115><p>Scrum Master</p><h5><a href="https://github.com/Rocio-Leiva">Rocío Leiva</a></h5><h5><a href="https://www.linkedin.com/in/rocio-leiva-pecho/">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/226889415-9cee7e56-4bf8-439b-9221-fbdc7332b48a.jpg" width=115><p>Product Owner</p><h5><a href="https://github.com/EvaAramburu">Eva Aramburu</a></h5><h5><a href="https://www.linkedIn.com/in/eva-aramburu19950913/">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/226875930-748fc1d7-13ba-4be0-b59a-1a5ba8892dd2.png" width=115><p>Developer</p><h5><a href="https://github.com/Ma-shi22">María Carvalho</a></h5><h5><a href="https://www.linkedin.com/in/mariashirleicarvalho/">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/226876284-d3489d97-f910-4cb9-9470-af3f6fa31da2.png" width=115><p>Developer</p><h5><a href="https://github.com/Diancris">Diana Romero</a></h5><h5><a href="">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/226876297-6c7b09d6-c2fe-4a4e-9406-324bd8aca214.jpg" width=115><p>Developer</p><h5><a href="https://github.com/VeronicaAnais">Verónica Gallardo</a></h5><h5><a href="https://www.linkedin.com/in/ver%C3%B3nica-gallardo-pedemonte-b537314b/">LinkedIn</a></h5>|
+||||<img src="https://user-images.githubusercontent.com/117834362/226876297-6c7b09d6-c2fe-4a4e-9406-324bd8aca214.jpg" width=115><p>Developer</p><h5><a href="https://github.com/VeronicaAnais">Verónica Gallardo</a></h5><h5><a href="https://www.linkedin.com/in/ver%C3%B3nica-gallardo-pedemonte-b537314b/">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/226867726-d41a6307-9121-48bf-9083-acbb2da7db5e.jpg" width=115><p>Developer</p><h5><a href="https://github.com/Rocio-Leiva">Rocío Leiva</a></h5><h5><a href="https://www.linkedin.com/in/rocio-leiva-pecho/">LinkedIn</a></h5>|
 | :---: | :---: | :---: | :---: | :---: |
 
 
 
-*Developed with :sparkling_heart: by Sakura-Kimonos Team*
+*Developed with :sparkling_heart: by Dona Bosco Team*
