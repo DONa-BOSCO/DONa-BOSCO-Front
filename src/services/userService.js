@@ -32,9 +32,17 @@ export const userService = {
         return user;
     },
     async insertUser(newUserRequestModel){
-           
+        let options={
+            url:  '/User/InsertUser',
+            method: 'post',
+            headers:{
+                'Content-Type':'application/json',
+                // 'Authorization':''
+            }
 
-        let response = await apiClient.post("/User/InsertUser", newUserRequestModel)
+        }
+
+        let response = await apiClient.post("/User/InsertUser", newUserRequestModel,options)
         if (response.status === 200) 
         {   
             Swal.fire({ 
