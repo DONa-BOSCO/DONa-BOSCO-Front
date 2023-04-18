@@ -7,12 +7,15 @@ const Sidebarc = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="bg-danger col-3 min-vh-100 d-flex flex-column flex-grow-0">
+        <div 
+        style = {{ backgroundColor: "#DC001B" }}
+        className=" col-3 min-vh-100 d-flex flex-column flex-grow-0">
           <hr />
 
-          <Nav.Link
+        
+         <Nav.Link
             href="/mi-perfil"
-            className="text-dark fs-5 fs-md-4 fs-lg-3 mb-5">
+            className="text-white fs-5 fs-md-4 fs-lg-3 mb-5">
             <center>
               <BsFillPersonFill />
               <span className="ms-2 d-none d-sm-inline">Mi Perfil</span>
@@ -21,7 +24,7 @@ const Sidebarc = () => {
 
           <Nav.Link
             href="/productos"
-            className="text-dark fs-5 fs-md-4 fs-lg-3 mb-5">
+            className="text-white fs-5 fs-md-4 fs-lg-3 mb-5">
             <center>
               <AiOutlineTags />
               <span className="ms-2 d-none d-sm-inline">Por Donar</span>
@@ -30,14 +33,14 @@ const Sidebarc = () => {
 
           <Nav.Link
             href="/ya-donados"
-            className="text-dark fs-5 fs-md-4 fs-lg-3 mb-5">
+            className="text-white fs-5 fs-md-4 fs-lg-3 mb-5">
             <center>
               <AiOutlineHeart />
               <span className="ms-2 d-none d-sm-inline">Donados</span>
             </center>
           </Nav.Link>
 
-          
+
         </div>
       </div>
     </div>
