@@ -1,14 +1,13 @@
-# DONa-BOSCO-Front#  Sakura-Kimonos-Front
+# DONa-BOSCO-Front
 
- <h2 align="center"> :kimono: Welcome to Sakura Kimonos</h2>
+ <h2 align="center"> :heart: Welcome to Sakura Kimonos</h2>
 
 
- <div align="center"><img src="https://user-images.githubusercontent.com/117834362/226922234-ce15524f-26c2-4ff8-ac0f-c2053b1015e2.png"></div>
+
+ <div align="center"><img src="https://user-images.githubusercontent.com/117834362/232772720-66bf2d7e-8e03-41be-9ee4-bc8930a5b2e6.png"></div>
  
 
-
-
- <h2 align="center"> :busts_in_silhouette:  Mission & Team </h2>
+<h2 align="center"> :busts_in_silhouette:  Mission & Team </h2>
  
   <p align="center"> We are a team of Japanese fashion enthusiasts aiming for a more understanding and open-minded society, where fashion plays a crucial rol. We believe that fashion has built individual and collective identities for a long time. Now it's time for fashion to melt and adapt itself to new shapes, colors, features and fabrics. That is why in Sakura Kimonos we support the investigation and development of more environmentally responsible products, pacgkaging and commit to create sustainable importing routes.</p>
    <p align="center">Inmerse yourself in Japanese culture and its fashion history while revisiting some of its most well-known garments, such as full-set Kimono, haori, yukata and so on. Explore Japanese fashion visual language through patterns, fabrics and accesories and create your own unique look with us! Share your experience in Sakura Kimonos and connect with other Sakura Kimonos' fans around the world.</p>
@@ -24,11 +23,13 @@
 
 
 
+
+
 <h2 align="center"> :camera:  Screenshots</h2>
 
-| <a href="https://trello.com/b/uXQ3TO7Y/e-commerce">Trello</a> | <a href="https://www.figma.com/file/64inr6vpFqOsRp8V5BLpCl/SakuraKimonos?node-id=0-1&t=S0SMPu28KArf3gpZ-0">Figma</a> | 
+| <a href="https://claudettenavass.atlassian.net/jira/software/projects/DB/boards/1">Jira</a> | <a href="https://www.figma.com/file/HKp6wLsOzz6CIM580gxGyy/DONa-Bosco?node-id=0-1&t=VgoOy3mtaRPkxyck-0">Figma</a> | 
 | :---: | :---: | 
-|![trello 1](https://user-images.githubusercontent.com/117834362/226338848-e378b190-d101-45e2-90cc-6d32109708ba.png)![Trello2](https://user-images.githubusercontent.com/117834362/226338858-217b42e2-1a26-43fb-a36d-f39338b2206e.png)|![captura pantalla figma](https://user-images.githubusercontent.com/117834362/226335880-87d67bda-3a21-434f-bff6-be912b19f6c5.png)|
+|![Jira Dona Bosco Captura](https://user-images.githubusercontent.com/117834362/232773343-2d572480-d1f6-40e9-ad43-1ebe824f6595.png)|![Dona Bosco Figma captura](https://user-images.githubusercontent.com/117834362/232772927-d513654e-7829-4c52-9f99-26e0e93361a5.png)|
 
 
 
