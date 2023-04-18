@@ -3,12 +3,13 @@ import Swal from 'sweetalert2';
 
 const apiClient = axios.create({
     baseURL: 'https://localhost:7048/',
-    withCredentials: false,
-    headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-    }
-})
+    // withCredentials: true,
+    // headers: {
+    //     'Content-Type': 'application/json',
+    //     Accept: 'application/json'
+//      }
+ }
+)
 
 export const productService = {
     async getProducts() {
@@ -32,7 +33,17 @@ export const productService = {
         return product;
     },
     async submitProduct(newProductRequestModel){
-        let response = await apiClient.post("/Product/AddProduct", newProductRequestModel)
+        let options={
+            url:  '/Product/AddProduct',
+            method: 'post',
+            headers:{
+                'Content-Type':'application/json',
+                // 'Authorization':''
+            }
+
+        }
+
+        let response = await apiClient.post("/Product/AddProduct", newProductRequestModel,options)
         if (response.status === 200)
         {
             Swal.fire({

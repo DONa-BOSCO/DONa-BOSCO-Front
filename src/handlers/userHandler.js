@@ -1,7 +1,7 @@
 import { userService } from '../services/userService';
 
 export const userHandler = {
-    addUser(newUser) {
+    insertUser(newUser) {
         if (!newUser) {
             return;
         }
@@ -14,7 +14,7 @@ export const userHandler = {
             "userData": {
             
                 "fullName": newUser.fullName,
-                "nickName": newUser.nickName,
+                // "nickName": newUser.nickName,
                 "email": newUser.email,
                 "password": newUser.password,
                 "phoneNumber": newUser.phoneNumber,
@@ -27,7 +27,7 @@ export const userHandler = {
 
         }
 
-        return userService.addUser(newUserRequestModel);
+        return userService.insertUser(newUserRequestModel);
 
     },
 
@@ -52,11 +52,11 @@ export const userHandler = {
 
         let updatedUserRequestModel = {
             "userData": {             
-                "fullName": updatedProduct.fullName,
-                "nickName": updatedProduct.nickName,
-                "email": updatedProduct.email,
-                "password": updatedProduct.password,
-                "phoneNumber": updatedProduct.phoneNumber,
+                "fullName": updatedUser.fullName,
+                // "nickName": updatedUser.nickName,
+                "email": updatedUser.email,
+                "password": updatedUser.password,
+                "phoneNumber": updatedUser.phoneNumber,
             },
             "fileData": {
                 "fileName": newUser.fullName + "-Photo",

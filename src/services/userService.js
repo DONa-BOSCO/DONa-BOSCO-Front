@@ -3,7 +3,7 @@ import Swal from 'sweetalert2';
 
 const apiClient = axios.create({
     baseURL: 'https://localhost:7048/',
-    withCredentials: false,
+    withCredentials: true,
     headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json'   
@@ -31,7 +31,9 @@ export const userService = {
         let user = response.data;
         return user;
     },
-    async addUser(newUserRequestModel){
+    async insertUser(newUserRequestModel){
+           
+
         let response = await apiClient.post("/User/InsertUser", newUserRequestModel)
         if (response.status === 200) 
         {   
