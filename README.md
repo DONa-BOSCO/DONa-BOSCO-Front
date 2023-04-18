@@ -81,8 +81,9 @@
 
 
 
-||||<img src="https://user-images.githubusercontent.com/117834362/226876297-6c7b09d6-c2fe-4a4e-9406-324bd8aca214.jpg" width=115><p>Developer</p><h5><a href="https://github.com/VeronicaAnais">Verónica Gallardo</a></h5><h5><a href="https://www.linkedin.com/in/ver%C3%B3nica-gallardo-pedemonte-b537314b/">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/226867726-d41a6307-9121-48bf-9083-acbb2da7db5e.jpg" width=115><p>Developer</p><h5><a href="https://github.com/Rocio-Leiva">Rocío Leiva</a></h5><h5><a href="https://www.linkedin.com/in/rocio-leiva-pecho/">LinkedIn</a></h5>|
+|<img src="https://user-images.githubusercontent.com/117834362/232775703-7d23d054-84ad-42a5-a5f8-1b4abd438bd2.png" width=115><p>Scrum Master</p><h5><a href="https://github.com/CLAUDETTEGONZALEZ">Claudette Gonzalez</a></h5><h5><a href="https://www.linkedin.com/in/claudette-gonzalez-4651aa266/">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/232775703-7d23d054-84ad-42a5-a5f8-1b4abd438bd2.png" width=115><p>Scrum Master</p><h5><a href="https://github.com/CLAUDETTEGONZALEZ">Claudette Gonzalez</a></h5><h5><a href="https://www.linkedin.com/in/claudette-gonzalez-4651aa266/">LinkedIn</a></h5>||<img src="https://user-images.githubusercontent.com/117834362/226876297-6c7b09d6-c2fe-4a4e-9406-324bd8aca214.jpg" width=115><p>Developer</p><h5><a href="https://github.com/VeronicaAnais">Verónica Gallardo</a></h5><h5><a href="https://www.linkedin.com/in/ver%C3%B3nica-gallardo-pedemonte-b537314b/">LinkedIn</a></h5>|<img src="https://user-images.githubusercontent.com/117834362/226867726-d41a6307-9121-48bf-9083-acbb2da7db5e.jpg" width=115><p>Developer</p><h5><a href="https://github.com/Rocio-Leiva">Rocío Leiva</a></h5><h5><a href="https://www.linkedin.com/in/rocio-leiva-pecho/">LinkedIn</a></h5>|
 | :---: | :---: | :---: | :---: | :---: |
+
 
 
 
