@@ -13,11 +13,11 @@ export const userHandler = {
         let newUserRequestModel = {
             "userData": {
             
-                "fullName": newUser.fullName,
-                // "nickName": newUser.nickName,
+                "firstName": newUser.firstName,
+                "lastName": newUser.lastName,
+                 "userName": newUser.userName,
                 "email": newUser.email,
                 "password": newUser.password,
-                "phoneNumber": newUser.phoneNumber,
             },
 
             // "fileData": {
@@ -26,7 +26,7 @@ export const userHandler = {
             // }
 
         }
-
+        console.log(newUserRequestModel)
         return userService.insertUser(newUserRequestModel);
 
     },

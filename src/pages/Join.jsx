@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Container } from "react-bootstrap";
+import { userHandler } from '../handlers/userHandler';
 
 
 const Join = () => {
@@ -11,12 +12,9 @@ const Join = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log(`First Name: ${firstName},
-                 Last Name: ${lastName},
-                 Username: ${username},
-                 Email: ${email},
-                 Password: ${password}`);
+    let newUser = { firstName, lastName, username, email, password };
+    userHandler.insertUser(newUser);
+    event.target.reset()
   };
 
   const handleFirstNameChange = (event) => {
