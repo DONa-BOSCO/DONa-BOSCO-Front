@@ -1,0 +1,23 @@
+{
+"products": [
+    {
+      "id": 1,
+      "title": "sofa grande",
+      "description": "Sofa muy comodo de color vinotinto de tres asientos",
+      "category": "Hogar y jardin",
+      "condition": "seminuevo",
+      "location": "Huelva",
+      "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/womens-japanese-temari-kimono-one-size-739_2000x.jpg?v=1619718576"
+    },
+
+    {
+        "id": 2,
+        "title": "Juego de Mesa",
+        "description": "Juego de Mesa XCOM para jugar con amigos",
+        "category": "Videojuegos y videojuegos",
+        "condition": "seminuevo",
+        "location": "Sevilla",
+        "img": "https://cdn.shopify.com/s/files/1/0266/2403/2817/products/womens-japanese-temari-kimono-one-size-739_2000x.jpg?v=1619718576"
+    }
+  ]
+}
