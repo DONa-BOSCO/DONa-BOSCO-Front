@@ -15,9 +15,9 @@
 
  <h2 align="center"> :memo:  Projet Description:</h2>
 <p align="center"> DONa BOSCO is a web project commissioned by the Don Bosco Foundation.</p>
-<p>Don Bosco is a foundation of the Salesian María Auxiliadora Inspectorate of the Salesians founded in 1998 in Spain. They develop residential care projects, socio-educational projects, socio-labor integration projects, support for formal education, digital divide projects, community promotion, as well as social volunteering initiatives.</p>
-<p>DONa Bosco is a solidarity website, whose objective is to encourage people to help each other by donating things they no longer want or need, thereby also supporting the environment by preventing functional products from ending up in a landfill. On this website, transactions are made between individuals; users must register and log in. Once logged in, they can post items for interested individuals to collect from the indicated location.</p> 
-<p> With this project, we aim to make the world a better place. :two_hearts:</p>
+<p align="center">Don Bosco is a foundation of the Salesian María Auxiliadora Inspectorate of the Salesians founded in 1998 in Spain. They develop residential care projects, socio-educational projects, socio-labor integration projects, support for formal education, digital divide projects, community promotion, as well as social volunteering initiatives.</p>
+<p align="center">DONa Bosco is a solidarity website, whose objective is to encourage people to help each other by donating things they no longer want or need, thereby also supporting the environment by preventing functional products from ending up in a landfill. On this website, transactions are made between individuals; users must register and log in. Once logged in, they can post items for interested individuals to collect from the indicated location.</p> 
+<p align="center"> With this project, we aim to make the world a better place. :two_hearts:</p>
  
  
 
