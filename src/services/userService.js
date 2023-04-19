@@ -69,6 +69,19 @@ export const userService = {
                 hideClass: { popup: 'animate__animated animate__fadeOutUp' }
             })
         }
+    },
+    async loginUser(LoginRequest) {
+        
+        let options = {
+
+            headers: {
+                'Content-Type': 'application/json',
+
+            }
+
+        }
+
+        let response = await apiClient.post("/User/Login", LoginRequest, options)
     }
 
 }

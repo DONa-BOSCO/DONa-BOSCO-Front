@@ -28,7 +28,8 @@ const Login = () => {
 
   return (
     <Container className="d-flex justify-content-center mt-5 entrar" style={{ marginTop: "20px", marginBottom: "20px", }}>
-      <Form onSubmit={handleSubmit} style={{ width: "500px" }}>
+      <Form action="https://localhost:7048/User/InsertUser" method="POST" onSubmit={handleSubmit} style={{ width: "500px" }}>
+
         <Form.Group controlId="formBasicEmail"className="d-flex justify-content-center mt-3 ">
           <Form.Label>Email</Form.Label>
           <Form.Control

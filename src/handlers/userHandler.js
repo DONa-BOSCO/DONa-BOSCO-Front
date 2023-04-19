@@ -34,9 +34,6 @@ export const userHandler = {
             return;
         }
 
-        // let imgStringData = updatedUser.img;
-        // let imgStringDataSplit = imgStringData.split(',');
-        // let imgContent = imgStringDataSplit[1];
 
         let updatedUserRequestModel = {
             
@@ -47,12 +44,24 @@ export const userHandler = {
                 "email": updatedUser.email,
                 "password": updatedUser.password,
            
-            // "fileData": {
-            //     "fileName": newUser.fullName + "-Photo",
-            //     "base64FileContent": imgContent
-            // }
+          
         }
 
         return userService.updateUser(id, updatedUserRequestModel);
-    }
+    },
+    loginUser(newUser) {
+        if (!newUser) {
+            return;
+        }
+
+        let LoginRequest = {
+               
+                "email": newUser.email,
+                "password": newUser.password,
+
+        }
+   
+        return userService.loginUser(LoginRequest);
+
+    },
 }
