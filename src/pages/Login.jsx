@@ -5,6 +5,7 @@ import  './Stylesheet/Login.css'
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
   
 
   const handleSubmit = (event) => {

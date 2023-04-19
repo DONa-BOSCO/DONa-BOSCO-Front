@@ -1,22 +1,30 @@
 import React, { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
+import { Form, Button, Container,Modal  } from "react-bootstrap";
+import { userHandler } from '../handlers/userHandler';
+
 
 
 const Join = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [username, setUsername] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    console.log(`First Name: ${firstName},
-                 Last Name: ${lastName},
-                 Username: ${username},
-                 Email: ${email},
-                 Password: ${password}`);
+    let newUser = { firstName, lastName, userName, email, password };
+    userHandler.insertUser(newUser).then((response) => {
+      if (response.status === 200) {
+        setModalMessage("El registro ha sido agregado exitosamente.");
+        setShowModal(true);
+        event.target.reset();
+      } else {
+        setModalMessage("No se ha podido agregar el registro.");
+        setShowModal(true);
+      }
+    });
   };
 
   const handleFirstNameChange = (event) => {
@@ -27,8 +35,8 @@ const Join = () => {
     setLastName(event.target.value);
   };
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+  const handleUserNameChange = (event) => {
+    setUserName(event.target.value);
   };
 
   const handleEmailChange = (event) => {
@@ -38,10 +46,14 @@ const Join = () => {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-  
+
   const handleRememberMeChange = (event) => {
     setRememberMe(event.target.checked);
+
   };
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+
 
   return (
     <Container
@@ -84,8 +96,8 @@ const Join = () => {
           <Form.Control
             type="text"
             placeholder="Introduce tu alias"
-            value={username}
-            onChange={handleUsernameChange}
+            value={userName}
+            onChange={handleUserNameChange}
             required
             style={{ width: "150%" }}
           />
@@ -120,23 +132,34 @@ const Join = () => {
             required
             style={{ width: "150%" }}
           />
-          
+
         </Form.Group>
         <Form.Text className="text-muted" style={{ fontSize: "10px" }}>
-            La contraseña debe contener al menos 6 caracteres, una letra mayúscula y un número.
-          </Form.Text>
-          <Form.Control.Feedback type="invalid">
-            La contraseña debe contener al menos 6 caracteres, una letra mayúscula y un número.
-          </Form.Control.Feedback>
+          La contraseña debe contener al menos 6 caracteres, una letra mayúscula y un número.
+        </Form.Text>
+        <Form.Control.Feedback type="invalid">
+          La contraseña debe contener al menos 6 caracteres, una letra mayúscula y un número.
+        </Form.Control.Feedback>
         <Form.Group controlId="formBasicCheckbox">
           <Form.Check type="checkbox" label="Recordar mis datos" onChange={handleRememberMeChange} />
         </Form.Group>
         <div className="d-flex justify-content-center mt-3">
-          <Button className="btn btn-custom" type="submit">
+          <Button className="btn btn-custom" type="submit" >
             Registrarme
           </Button>
         </div>
       </Form>
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Resultado del registro</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{modalMessage}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Cerrar
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };

@@ -3,22 +3,21 @@ import Swal from 'sweetalert2';
 
 const apiClient = axios.create({
     baseURL: 'https://localhost:7048/',
-    withCredentials: true,
+    /* withCredentials: true,
     headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json'   
-    }
+        Accept: 'application/json' */
+    /* } */
 })
 
 export const userService = {
     async getUser() {
         let response = await apiClient.get("/User/GetAllUsers");
-        if (!response==200)
-            {
-                alert('Hubo un error al buscar estos usuarios');
-            };
-        let allUser = response.data;
-       
+        if (!response == 200) {
+            alert('Hubo un error al buscar estos usuarios');
+        };
+        let allUser = await response.data;
+
         return allUser;
     },
     async getUser(id) {
@@ -31,45 +30,45 @@ export const userService = {
         let user = response.data;
         return user;
     },
-    async insertUser(newUserRequestModel){
-        let options={
-            url:  '/User/InsertUser',
-            method: 'post',
-            headers:{
-                'Content-Type':'application/json',
-                // 'Authorization':''
+    async insertUser(newUserRequestModel) {
+        console.log(newUserRequestModel)
+        let options = {
+
+            headers: {
+                'Content-Type': 'application/json',
+
             }
 
         }
 
-        let response = await apiClient.post("/User/InsertUser", newUserRequestModel,options)
-        if (response.status === 200) 
-        {   
-            Swal.fire({ 
-            icon: 'success', 
-            title: 'Nuevo Usuario Registrado', 
-            showConfirmButton: true, 
-            showClass: { popup: 'animate__animated animate__fadeInDown' }, 
-            hideClass: { popup: 'animate__animated animate__fadeOutUp' } })   
-         } else { 
+        let response = await apiClient.post("/User/InsertUser", newUserRequestModel, options)
+      
+        if (response.status === 200) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Nuevo Usuario Registrado',
+                showConfirmButton: true,
+                showClass: { popup: 'animate__animated animate__fadeInDown' },
+                hideClass: { popup: 'animate__animated animate__fadeOutUp' }
+            })
+        } else {
             alert("Upsi...");
-         }
-
+        }
     },
     async deleteUser(id) {
         await apiClient.delete("/User/DeactivateUser?id=" + id)
     },
-    async updateUser(id, updatedUserRequestModel){
+    async updateUser(id, updatedUserRequestModel) {
         await apiClient.patch("/User/Patch" + id, updatedUserRequestModel)
-        if(response.status === 200)
-        {
+        if (response.status === 200) {
             Swal.fire({
-            icon: 'success',
-            title: 'el usuario ha sido actualizado',
-            showConfirmButton: true,
-            showClass: { popup: 'animate__animated animate__fadeInDown' },
-            hideClass: { popup: 'animate__animated animate__fadeOutUp' } })
-         }
+                icon: 'success',
+                title: 'el usuario ha sido actualizado',
+                showConfirmButton: true,
+                showClass: { popup: 'animate__animated animate__fadeInDown' },
+                hideClass: { popup: 'animate__animated animate__fadeOutUp' }
+            })
+        }
     }
 
-    }
+}
