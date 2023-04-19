@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
 import Header from '../src/components/Header'
 
 describe('Show navbar contact', () => {
