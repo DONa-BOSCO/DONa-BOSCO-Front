@@ -9,11 +9,15 @@
 
 <h2 align="center"> :busts_in_silhouette:  Mission & Team </h2>
  
-  <p align="center"> texto.</p>
-   <p align="center">texto.</p>
+  <p align="center"> Hola amigos, somo seis mujeres terminando el Bootcamp de Desarrollo Web Full Stack de Femcoders Factoría F5. Este es nuestro Último Proyecto, el Número 8 (Proyecto Pedagógico), en él hemos puesto a prueba todas las habilidades y conocimientos adquiridos en estos últimos seis meses para conseguir una web funcional y estética, trabajando en equipo, con respeto, compromiso, asertividad y coordinación. Una web que pueda tener mejoras e implementaciones en el futuro y se convierta en un gran proyecto solidario en España, y quien sabe sin en un futuro en más países  :two_women_holding_hands:  .</p>
+   <p align="center">texto.</p> 
 
 
- <h2 align="center"> :memo:  Projet Description: </h2>
+ <h2 align="center"> :memo:  Projet Description:</h2>
+DONa BOSCO es un proyecto Web encargado por la Fundación Don Bosco.
+Don Bosco es una fundación de la Inspectoría Salesiana María Auxiliadora de los Salesianos, desarrollan proyectos de atención residencial, socioeducativos, de inserción sociolaboral, de apoyo a la educación formal, de lucha contra la brecha digital, de promoción comunitaria, además de iniciativas de voluntariado social.
+DONa Bosco es una página web solidaria, su objetivo es que las personas se ayuden unas a otras donando cosas que ya no quieran o necesiten, apoyando así también al medio ambiente evitando que productos aún funcionales acaben en un vertedero. En esta web se hacen transacciones entre particulares, los usuario tienen que registrarse e iniciar sesión, una vez iniciada la sesión, podrán publicar productos para que las personas interesadas los recojan en la ubicación que se indique. 
+Con este proyecto intentamos hacer del mundo un lugar mejor :two_hearts:
  
 <p align="center"></p>
  <p align="center"> texto.</p>
@@ -77,7 +81,7 @@
 <p align="center"> - Texto </p>  
 
 
-<h2> 👩‍ 💻Group members:</h2>
+<h2> :woman:💻Group members:</h2>
 
 
 
