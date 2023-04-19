@@ -14,15 +14,11 @@
 
 
  <h2 align="center"> :memo:  Projet Description:</h2>
-DONa BOSCO es un proyecto Web encargado por la Fundación Don Bosco.
+<p align="center">DONa BOSCO es un proyecto Web encargado por la Fundación Don Bosco.
 Don Bosco es una fundación de la Inspectoría Salesiana María Auxiliadora de los Salesianos, desarrollan proyectos de atención residencial, socioeducativos, de inserción sociolaboral, de apoyo a la educación formal, de lucha contra la brecha digital, de promoción comunitaria, además de iniciativas de voluntariado social.
 DONa Bosco es una página web solidaria, su objetivo es que las personas se ayuden unas a otras donando cosas que ya no quieran o necesiten, apoyando así también al medio ambiente evitando que productos aún funcionales acaben en un vertedero. En esta web se hacen transacciones entre particulares, los usuario tienen que registrarse e iniciar sesión, una vez iniciada la sesión, podrán publicar productos para que las personas interesadas los recojan en la ubicación que se indique. 
-Con este proyecto intentamos hacer del mundo un lugar mejor :two_hearts:
+Con este proyecto intentamos hacer del mundo un lugar mejor :two_hearts:</p>
  
-<p align="center"></p>
- <p align="center"> texto.</p>
-
-<p align="center">texto.</p>
  
 
 
@@ -57,9 +53,7 @@ Con este proyecto intentamos hacer del mundo un lugar mejor :two_hearts:
 
 <p align="center">1) Clone the repository</p>
 <p align="center">2) npm install</p>
-<p align="center">3) npm install -g json-server</p>
-<p align="center">4) json-server --watch ./api/db.json</p>
-<p align="center">5) npm run dev</p>
+<p align="center">3) npm run dev</p>
 
 
 <h2 align="center"> - How to install the project (Back):</h2>
