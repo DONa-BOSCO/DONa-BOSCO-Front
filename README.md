@@ -36,13 +36,13 @@
 
 <h2 align="center"> 🔧Stacks:</h2>
 
-<p align="center">| Node.js | NPM | React |JavaScript | CSS3 | HTML5 | C# | ASP.NET Core 6 | Entity Framework 7 | SQL Server| Bootstrap |</p>
+<p align="center">| Node.js | Axios | React |JavaScript | CSS3 | HTML5 | C# | ASP.NET Core 6 | Entity Framework 7 | SQL Server| Bootstrap | NPM |</p>
 
 
 <h2 align="center">  Tools</h2>
 
 <p align="center">- Figma</p>
-<p align="center">- Trello</p>
+<p align="center">- Jira</p>
 <p align="center">- GitHub</p>
 <p align="center">- Visual Studio Code</p>
 <p align="center">- Visual Studio</p>
@@ -67,8 +67,9 @@
 <p align="center">- Pair Programming.</p>
 
 <h2 align="center"> 👀  Testing:</h2>
-<p align="center"> Texto </p> 
-<p align="center"> Texto </p> 
+<p align="center">  Tested renderizaion of components (Footer and Header)</p> 
+<p align="center"> Try running npm run test  </p> 
+
 <h2 align="center">  🧪Next Steps:</h2>
 
 <p align="center"> - Texto </p>
