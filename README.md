@@ -9,8 +9,8 @@
 
 <h2 align="center"> :busts_in_silhouette:  Mission & Team </h2>
  
-  <p align="center"> Hola amigos, somo seis mujeres terminando el Bootcamp de Desarrollo Web Full Stack de Femcoders Factoría F5. Este es nuestro Último Proyecto, el Número 8 (Proyecto Pedagógico), en él hemos puesto a prueba todas las habilidades y conocimientos adquiridos en estos últimos seis meses para conseguir una web funcional y estética, trabajando en equipo, con respeto, compromiso, asertividad y coordinación. Una web que pueda tener mejoras e implementaciones en el futuro y se convierta en un gran proyecto solidario en España, y quien sabe sin en un futuro en más países  :two_women_holding_hands:  .</p>
-   <p align="center">texto.</p> 
+  <p align="center"> Hello friends, we are six women finishing the Full Stack Web Development Bootcamp at Femcoders Factoría F5. This is our Final Project, Project number 8 (Pedagogical Project), in which we have put all the skills and knowledge acquired in the last six months to the test to achieve a functional, aesthetic, and intuitive website, working as a team, with respect, commitment, assertiveness, and coordination. A website that can have improvements and implementations in the future and become a great solidarity project in Spain, and who knows, perhaps in the future in more countries. :two_women_holding_hands:  .</p>
+
 
 
  <h2 align="center"> :memo:  Projet Description:</h2>
