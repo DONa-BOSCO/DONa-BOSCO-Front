@@ -6,7 +6,7 @@ import { BsEye } from 'react-icons/bs';
 import ProductModalUser from '../components/ProductModalUser';
 import './Stylesheet/DashboardUser.css';
 import { productService } from "../services/productService.js";
-import Sidebarc from "../components/Sidebarc"
+import Sidebar from '../components/Sidebar';
 import { Container } from "react-bootstrap";
 
 function Dashboard() {
@@ -55,8 +55,9 @@ function Dashboard() {
   return (
     
     <>
+       <Sidebar />
       <div className="d-flex mt-5">
-        <Sidebarc />
+       
         <Container>
           <div className="container-gn" id="text">
             <br />
