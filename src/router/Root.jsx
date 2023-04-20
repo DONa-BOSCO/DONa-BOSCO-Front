@@ -10,8 +10,9 @@ function Root() {
             <Header />
             
             <Outlet />
+           
             <Footer />
         </>
     )
 }
-export default Root;
+export default Root; 

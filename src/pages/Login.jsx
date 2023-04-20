@@ -32,7 +32,6 @@ const Login = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Introduce tu email"
             value={email}
             onChange={handleEmailChange}
             required
@@ -47,7 +46,6 @@ const Login = () => {
           <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Introduce contraseña"
             value={password}
             onChange={handlePasswordChange}
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"

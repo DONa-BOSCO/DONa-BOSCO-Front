@@ -2,6 +2,7 @@ h6{
     margin: 0;
     color: black;
     text-align: center;
+    
 }
 
 .item{
@@ -9,10 +10,26 @@ h6{
     margin: 1em;
     color: white;
     float: left;
-    width: 7em;
+    width: 8em;
     height: 7rem;  
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    margin-top: 30px;
 }
 .imgStyle{
     width: 7rem;
+}
+
+.item9{
+    align: center;
+    margin: 1em;
+    color: white;
+    float: left;
+    width: 4em;
+    height: 4rem;  
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+
+.imgStyle9{
+    width: 4rem;
 }

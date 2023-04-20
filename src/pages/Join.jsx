@@ -12,11 +12,7 @@ const Join = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(`First Name: ${firstName},
-                 Last Name: ${lastName},
-                 Username: ${username},
-                 Email: ${email},
-                 Password: ${password}`);
+  
   };
 
   const handleFirstNameChange = (event) => {
@@ -53,7 +49,6 @@ const Join = () => {
           <Form.Label>Nombre</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Introduce tu nombre"
             value={firstName}
             onChange={handleFirstNameChange}
             required
@@ -68,7 +63,6 @@ const Join = () => {
           <Form.Label>Apellidos</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Introduce tus apellidos"
             value={lastName}
             onChange={handleLastNameChange}
             required
@@ -83,7 +77,6 @@ const Join = () => {
           <Form.Label>Alias</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Introduce tu alias"
             value={username}
             onChange={handleUsernameChange}
             required
@@ -98,7 +91,6 @@ const Join = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Introduce tu email"
             value={email}
             onChange={handleEmailChange}
             required
@@ -113,7 +105,6 @@ const Join = () => {
           <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Introduce contraseña"
             value={password}
             onChange={handlePasswordChange}
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"

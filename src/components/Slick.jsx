@@ -39,11 +39,13 @@ juegos</h6>
     <img className="imgStyle" src="https://i.pinimg.com/564x/c7/9b/ac/c79bacee9d07fa760b9f981130758216.jpg" alt="" />
         <h6>Artículos infantiles</h6>
     </div>
-    <div className="item" >
-    <img className="imgStyle" src="https://i.pinimg.com/564x/3e/90/15/3e901597308cba363453d893ee749940.jpg" alt="" />
+    <div className="item9" >
+    <img className="imgStyle9" src="https://i.pinimg.com/564x/3e/90/15/3e901597308cba363453d893ee749940.jpg" alt="" />
         <h6>Otros</h6>
     </div>
+  
    </div>
+   
   )
 }
 export default Slick;
