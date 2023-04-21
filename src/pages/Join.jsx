@@ -93,8 +93,8 @@ const Join = () => {
           <Form.Label>Alias</Form.Label>
           <Form.Control
             type="text"
-            value={username}
-            onChange={handleUsernameChange}
+            value={userName}
+            onChange={handleUserNameChange}
             required
             style={{ width: "150%" }}
           />
