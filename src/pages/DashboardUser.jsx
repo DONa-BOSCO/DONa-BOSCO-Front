@@ -6,8 +6,9 @@ import { BsEye } from 'react-icons/bs';
 import ProductModalUser from '../components/ProductModalUser';
 import './Stylesheet/DashboardUser.css';
 import { productService } from "../services/productService.js";
-import Sidebar from '../components/SideBar';
+import SideBar from "../components/SideBar";
 import { Container } from "react-bootstrap";
+
 
 function Dashboard() {
 
@@ -52,16 +53,20 @@ function Dashboard() {
     getProducts()
   }, [])
 
+  const isLogged = JSON.parse(localStorage.getItem("userData"));
+  console.log(isLogged);
+
   return (
     
     <>
-       <Sidebar />
+       <SideBar />
       <div className="d-flex mt-5">
        
         <Container>
           <div className="container-gn" id="text">
             <br />
-            <h1 style={{marginLeft:'120px'}}> Todos los Productos </h1>
+            {isLogged ? <h3>La persona esta loggeada</h3> : <h3>La persona no está loggeada</h3>}
+            <h1> Todos los Productos </h1>
             <div className="container-bar">
               <label htmlFor="category-select"></label>
               <select id="category-select" className="btn btn-custom" onChange={handleCategoryChange}>

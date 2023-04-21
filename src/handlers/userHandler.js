@@ -6,27 +6,15 @@ export const userHandler = {
             return;
         }
 
-        // let imgStringData = newUser.img;
-        // let imgStringDataSplit = imgStringData.split(',');
-        // let imgContent = imgStringDataSplit[1];
-
         let newUserRequestModel = {
-            "userData": {
-            
-                "fullName": newUser.fullName,
-                // "nickName": newUser.nickName,
+                "firstName": newUser.firstName,
+                "lastName": newUser.lastName,
+                 "userName": newUser.userName,
                 "email": newUser.email,
                 "password": newUser.password,
-                "phoneNumber": newUser.phoneNumber,
-            },
-
-            // "fileData": {
-            //     "fileName": newUser.fullName + "-Photo",
-            //     "base64FileContent": imgContent
-            // }
 
         }
-
+        console.log(newUserRequestModel)
         return userService.insertUser(newUserRequestModel);
 
     },
@@ -46,24 +34,34 @@ export const userHandler = {
             return;
         }
 
-        let imgStringData = updatedUser.img;
-        let imgStringDataSplit = imgStringData.split(',');
-        let imgContent = imgStringDataSplit[1];
 
         let updatedUserRequestModel = {
-            "userData": {             
-                "fullName": updatedUser.fullName,
-                // "nickName": updatedUser.nickName,
+            
+            
+                "firstName": updatedUser.firstName,
+                "lastName": updatedUser.lastName,
+                 "userName": updatedUser.userName,
                 "email": updatedUser.email,
                 "password": updatedUser.password,
-                "phoneNumber": updatedUser.phoneNumber,
-            },
-            "fileData": {
-                "fileName": newUser.fullName + "-Photo",
-                "base64FileContent": imgContent
-            }
+           
+          
         }
 
         return userService.updateUser(id, updatedUserRequestModel);
-    }
+    },
+    // loginUser(newUser) {
+    //     if (!newUser) {
+    //         return;
+    //     }
+
+    //     let LoginRequest = {
+               
+    //             "email": newUser.email,
+    //             "password": newUser.password,
+
+    //     }
+   
+    //     return userService.loginUser(LoginRequest);
+
+    // },
 }
