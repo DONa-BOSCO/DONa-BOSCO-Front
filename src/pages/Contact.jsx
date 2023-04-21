@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
+import  './Stylesheet/Contact.css'
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -31,7 +32,6 @@ const Contact = () => {
           <Form.Label>Nombre</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Introduce tu nombre"
             value={name}
             onChange={handleNameChange}
             required
@@ -46,7 +46,6 @@ const Contact = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Introduce tu email"
             value={email}
             onChange={handleEmailChange}
             required
@@ -68,13 +67,13 @@ const Contact = () => {
             required
             style={{ width: '100%' }}
           />
-          <Form.Control.Feedback type="invalid">
+          <Form.Control.Feedback type="invalid"   >
             Por favor, escribe un mensaje.
           </Form.Control.Feedback>
         </Form.Group>
 
         <div className="d-flex justify-content-center">
-          <Button className="btn btn-custom" type="submit">
+          <Button className="btn btn-custom" style={{ marginTop: '20px' }} type="submit">
             Enviar mensaje
           </Button>
         </div>

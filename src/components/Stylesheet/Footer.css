@@ -1,0 +1,12 @@
+.footer {
+padding: 0 50px;
+
+}
+
+
+@media (max-width: 768px) {
+    .flex-column {
+      max-width: 100%;
+    }
+  }
+  

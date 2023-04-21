@@ -1,34 +1,21 @@
 import { userService } from '../services/userService';
 
 export const userHandler = {
-    addUser(newUser) {
+    insertUser(newUser) {
         if (!newUser) {
             return;
         }
 
-        // let imgStringData = newUser.img;
-        // let imgStringDataSplit = imgStringData.split(',');
-        // let imgContent = imgStringDataSplit[1];
-
         let newUserRequestModel = {
-            "userData": {
-                "rol": 2,
-                "fullName": newUser.fullName,
-                "nickName": newUser.nickName,
+                "firstName": newUser.firstName,
+                "lastName": newUser.lastName,
+                 "userName": newUser.userName,
                 "email": newUser.email,
                 "password": newUser.password,
-                "age": newUser.age,
-                "phoneNumber": newUser.phoneNumber,
-            },
-
-            // "fileData": {
-            //     "fileName": newUser.fullName + "-Photo",
-            //     "base64FileContent": imgContent
-            // }
 
         }
-
-        return userService.addUser(newUserRequestModel);
+        console.log(newUserRequestModel)
+        return userService.insertUser(newUserRequestModel);
 
     },
 
@@ -47,25 +34,34 @@ export const userHandler = {
             return;
         }
 
-        let imgStringData = updatedUser.img;
-        let imgStringDataSplit = imgStringData.split(',');
-        let imgContent = imgStringDataSplit[1];
 
         let updatedUserRequestModel = {
-            "userData": {             
-                "fullName": updatedProduct.fullName,
-                "nickName": updatedProduct.nickName,
-                "email": updatedProduct.email,
-                "password": updatedProduct.password,
-                "age": updatedProduct.age,
-                "phoneNumber": updatedProduct.phoneNumber,
-            },
-            "fileData": {
-                "fileName": newUser.fullName + "-Photo",
-                "base64FileContent": imgContent
-            }
+            
+            
+                "firstName": updatedUser.firstName,
+                "lastName": updatedUser.lastName,
+                 "userName": updatedUser.userName,
+                "email": updatedUser.email,
+                "password": updatedUser.password,
+           
+          
         }
 
         return userService.updateUser(id, updatedUserRequestModel);
-    }
+    },
+    // loginUser(newUser) {
+    //     if (!newUser) {
+    //         return;
+    //     }
+
+    //     let LoginRequest = {
+               
+    //             "email": newUser.email,
+    //             "password": newUser.password,
+
+    //     }
+   
+    //     return userService.loginUser(LoginRequest);
+
+    // },
 }
