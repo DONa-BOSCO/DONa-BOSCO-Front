@@ -1,0 +1,53 @@
+form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(167, 28%, 87%) !important;
+    width: 60vw;
+    align-items: left;
+    justify-content: left;
+    padding: 5vh;
+    margin: 5vh;
+    border-radius: 5vh;
+    color: white;
+    display: flex;
+    flex-direction: column; 
+}
+
+.profile-headline {
+    padding-top: 30px; 
+    color: white; 
+}
+
+.form-control-1{
+background-color: white;
+border-radius: 1.25rem;
+  border: 0;
+  width: 10vw;
+  color: black;
+  padding: .3125rem;
+  position: sticky;
+  top: .3125rem;
+  margin-left: .5rem;
+} 
+
+
+ @media (max-width: 600px){
+.form-control{
+    width: 40vw;
+    display: flex;
+
+}
+
+} 
+
+.row {
+    width: 50vw;
+    display: flex;
+
+}
+
+.div1 { margin: 30px;}
+
+.div2 { margin: 30px;}  
+
+.div3 { margin: 30px;} 
