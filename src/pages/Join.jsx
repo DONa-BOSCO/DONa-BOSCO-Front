@@ -51,8 +51,9 @@ const Join = () => {
     setRememberMe(event.target.checked);
 
   };
-  const [showModal, setShowModal] = useState(false);
-  const [modalMessage, setModalMessage] = useState("");
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
   return (
@@ -139,22 +140,12 @@ const Join = () => {
           <Form.Check type="checkbox" label="Recordar mis datos" onChange={handleRememberMeChange} />
         </Form.Group>
         <div className="d-flex justify-content-center mt-3">
-          <Button className="btn btn-custom" type="submit" >
+          <Button className="btn btn-custom" type="submit"onClick={handleShow} >
             Registrarme
           </Button>
         </div>
       </Form>
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Resultado del registro</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{modalMessage}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
-            Cerrar
-          </Button>
-        </Modal.Footer>
-      </Modal>
+     
     </Container>
   );
 };

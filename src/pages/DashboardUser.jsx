@@ -6,8 +6,9 @@ import { BsEye } from 'react-icons/bs';
 import ProductModalUser from '../components/ProductModalUser';
 import './Stylesheet/DashboardUser.css';
 import { productService } from "../services/productService.js";
-import SideBar from "../components/SideBar.jsx";
+import SideBar from "../components/SideBar.";
 import { Container } from "react-bootstrap";
+
 
 function Dashboard() {
 
@@ -52,6 +53,9 @@ function Dashboard() {
     getProducts()
   }, [])
 
+  const isLogged = JSON.parse(localStorage.getItem("userData"));
+  console.log(isLogged);
+
   return (
     
     <>
@@ -61,6 +65,7 @@ function Dashboard() {
         <Container>
           <div className="container-gn" id="text">
             <br />
+            {isLogged ? <h3>La persona esta loggeada</h3> : <h3>La persona no está loggeada</h3>}
             <h1> Todos los Productos </h1>
             <div className="container-bar">
               <label htmlFor="category-select"></label>

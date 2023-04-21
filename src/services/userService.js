@@ -42,7 +42,7 @@ export const userService = {
         }
 
         let response = await apiClient.post("/User/InsertUser", newUserRequestModel, options)
-      
+
         if (response.status === 200) {
             Swal.fire({
                 icon: 'success',
@@ -69,6 +69,24 @@ export const userService = {
                 hideClass: { popup: 'animate__animated animate__fadeOutUp' }
             })
         }
-    }
-
+    },
+    
 }
+
+export const loginUser = async(data) => {
+    console.log('hola',data);
+    let response= await apiClient.post ("/User/Login", data);
+    let dataResponse= await response.data;
+    console.log("desde el servicio",dataResponse);
+    if (response.status === 200) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Ha iniciado sesión correctamente',
+            showConfirmButton: true,
+            showClass: { popup: 'animate__animated animate__fadeInDown' },
+            hideClass: { popup: 'animate__animated animate__fadeOutUp' }
+            
+        })
+    } 
+    return dataResponse;
+};
