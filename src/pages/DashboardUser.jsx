@@ -61,7 +61,7 @@ function Dashboard() {
         <Container>
           <div className="container-gn" id="text">
             <br />
-            <h1> Todos los Productos </h1>
+            <h1 style={{marginLeft:'120px'}}> Todos los Productos </h1>
             <div className="container-bar">
               <label htmlFor="category-select"></label>
               <select id="category-select" className="btn btn-custom" onChange={handleCategoryChange}>

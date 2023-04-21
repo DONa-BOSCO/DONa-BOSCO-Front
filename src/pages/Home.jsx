@@ -9,6 +9,7 @@ import { productService } from "../services/productService.js";
 import Button from "react-bootstrap/Button";
 import { BsEye } from "react-icons/bs";
 
+
 const Home = () => {
   {
     const [productsData, setProductsData] = useState([]);
@@ -59,52 +60,42 @@ const Home = () => {
     return (
       <>
         <Slide />
-
         <div className="home--text">
-          <h1 style={{ textAlign: "center" }}>
-            Dona lo que ya no utilizas.
+          <h1 className="swift-up-text" style={{ textAlign: "center" }}>
+            <span>Dona lo que ya no utilizas.</span>
             <br />
-            Fácil, rápido y sin moverte del sofá.
+            <span>Fácil, y sin moverte del sofá</span>
           </h1>
         </div>
 
         <div className="d-flex">
           <Container>
             <div className="container-gn" id="text">
-            <h1> Todos los Productos </h1>
               <div className="container-bar">
                 <label htmlFor="category-select"></label>
                 <select
                   id="category-select"
-                  className="btn btn-custom"
+                  className="btn btn-custom p-2"
+                  style={{ width: '500px', textAlign: "left" }}
                   onChange={handleCategoryChange}
                 >
-                  <option value="">Selecciona por categoría </option>
+                  <option value="" style={{ textAlign: 'center' }}>Selecciona por categoría </option>
                   <option value="Ropa y accesorios">Ropa y accesorios</option>
                   <option value="Electrodomesticos">Electrodomésticos</option>
-                  <option value="Informatica y electrónica">
-                    Informatica y electrónica
-                  </option>
+                  <option value="Informatica y electrónica"> Informatica y electrónica</option>
                   <option value="Deporte y ocio">Deporte y ocio</option>
-                  <option value="Videojuegos y videojuegos">
-                    {" "}
-                    Videojuegos y juegos
-                  </option>
-                  <option value="Cine, libros y musica">
-                    Cine, libros y música
-                  </option>
-                  .<option value="Hogar y jardín">Hogar y jardín</option>
-                  <option value="Articulos infantiles">
-                    Artículos infantiles
-                  </option>
+                  <option value="Videojuegos y videojuegos"> {" "} Videojuegos y juegos</option>
+                  <option value="Cine, libros y musica">Cine, libros y música</option>
+                  <option value="Hogar y jardín">Hogar y jardín</option>
+                  <option value="Articulos infantiles"> Artículos infantiles </option>
                   <option value="Otros">Otros</option>
-                  <option value="">Todos los productos</option>
+                  <option value="" >Todos los productos</option>
                 </select>
               </div>
-            
+
 
               <div className="cards">
-                {data.map((product) => {
+               {data.slice(0, 4).map((product) => {
                   return (
                     <>
                       <ProductModalUser
@@ -112,7 +103,7 @@ const Home = () => {
                         handleClose={handleClose}
                         productModal={productModal}
                       />
-                      <Card border="light" style={{ width: "18rem" }}>
+                      <Card border="light" style={{ width: "16rem" }}>
                         <Card.Img
                           className="card-img"
                           variant="top"
@@ -157,6 +148,21 @@ const Home = () => {
                   );
                 })}
               </div>
+              <div className="Sponsors" style={{ textAlign: "center", width: "310px", margin: "0 auto", marginBottom: "100px", marginTop: "50px" }}>
+                <h1>Patrocinadores</h1>
+              </div>
+              <div className="container">
+                <div className="item" >
+                  <img className="imgStyle--f5" src="https://femcoders.factoriaf5.org/wp-content/uploads/2021/12/factoria-web.png" alt="" />
+                  <br />
+
+                </div>
+                <div className="item" >
+                  <img className="imgStyle" src="https://www.salesianssantjordi.org/wp-content/uploads/2020/12/imagotipo_vertical_RGB.jpg" alt="" />
+
+                </div>
+              </div>
+              
             </div>
           </Container>
         </div>
@@ -164,6 +170,6 @@ const Home = () => {
     );
   }
 
- 
+
 };
 export default Home;

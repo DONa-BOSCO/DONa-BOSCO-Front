@@ -89,7 +89,8 @@ exports[`Show navbar contact > renders text correctly 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="Shadow navbar navbar-expand-lg navbar-light bg-light"
+        class="Shadow  navbar navbar-expand-lg navbar-light bg-light"
+        style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);"
       >
         <div
           class="container"
@@ -102,9 +103,9 @@ exports[`Show navbar contact > renders text correctly 1`] = `
             >
               <img
                 alt="React Bootstrap logo"
-                height="70"
+                height="60"
                 src="/logo.png"
-                width="140"
+                width="120"
               />
             </a>
           </span>
@@ -123,14 +124,16 @@ exports[`Show navbar contact > renders text correctly 1`] = `
             id="responsive-navbar-nav"
           >
             <div
-              class="justify-content-end flex-grow-1 me-5 navbar-nav"
+              class="justify-content-end flex-grow-1 me-5 mt-2 navbar-nav"
             >
               <a
-                class="nav-link"
+                class="nav-link-contact nav-link"
                 data-rr-ui-event-key="/Contact"
                 href="/Contact"
               >
-                Contacto
+                <h5>
+                  Contacto
+                </h5>
               </a>
             </div>
             <div
@@ -140,7 +143,8 @@ exports[`Show navbar contact > renders text correctly 1`] = `
                 href="/Login"
               >
                 <button
-                  class="me-4 btn btn-custom btn btn-primary"
+                  class="me-4 btn btn-custom nav-btn btn btn-primary"
+                  style="border-color: #dc3545;"
                   type="button"
                 >
                   Iniciar Sesión
@@ -155,6 +159,7 @@ exports[`Show navbar contact > renders text correctly 1`] = `
               >
                 <button
                   class="me-4 btn btn-custom btn btn-primary"
+                  style="border-color: #dc3545;"
                   type="button"
                 >
                   Registrar
@@ -168,7 +173,8 @@ exports[`Show navbar contact > renders text correctly 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="Shadow navbar navbar-expand-lg navbar-light bg-light"
+      class="Shadow  navbar navbar-expand-lg navbar-light bg-light"
+      style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);"
     >
       <div
         class="container"
@@ -181,9 +187,9 @@ exports[`Show navbar contact > renders text correctly 1`] = `
           >
             <img
               alt="React Bootstrap logo"
-              height="70"
+              height="60"
               src="/logo.png"
-              width="140"
+              width="120"
             />
           </a>
         </span>
@@ -202,14 +208,16 @@ exports[`Show navbar contact > renders text correctly 1`] = `
           id="responsive-navbar-nav"
         >
           <div
-            class="justify-content-end flex-grow-1 me-5 navbar-nav"
+            class="justify-content-end flex-grow-1 me-5 mt-2 navbar-nav"
           >
             <a
-              class="nav-link"
+              class="nav-link-contact nav-link"
               data-rr-ui-event-key="/Contact"
               href="/Contact"
             >
-              Contacto
+              <h5>
+                Contacto
+              </h5>
             </a>
           </div>
           <div
@@ -219,7 +227,8 @@ exports[`Show navbar contact > renders text correctly 1`] = `
               href="/Login"
             >
               <button
-                class="me-4 btn btn-custom btn btn-primary"
+                class="me-4 btn btn-custom nav-btn btn btn-primary"
+                style="border-color: #dc3545;"
                 type="button"
               >
                 Iniciar Sesión
@@ -234,6 +243,7 @@ exports[`Show navbar contact > renders text correctly 1`] = `
             >
               <button
                 class="me-4 btn btn-custom btn btn-primary"
+                style="border-color: #dc3545;"
                 type="button"
               >
                 Registrar
