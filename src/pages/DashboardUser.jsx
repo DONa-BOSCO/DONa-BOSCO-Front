@@ -6,7 +6,7 @@ import { BsEye } from 'react-icons/bs';
 import ProductModalUser from '../components/ProductModalUser';
 import './Stylesheet/DashboardUser.css';
 import { productService } from "../services/productService.js";
-import SideBar from "../components/SideBar.";
+import SideBar from "../components/SideBar";
 import { Container } from "react-bootstrap";
 
 
