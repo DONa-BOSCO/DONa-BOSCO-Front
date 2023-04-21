@@ -1,0 +1,45 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    position:absolute;
+    left: 0;
+    height: 100vh;
+    width: 8.125rem;
+    background-color: #DC001B;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+.sidebar a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
+    height: 50px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #000000;
+}
+
+@media only screen and (max-width: 700px) {
+   .sidebar {
+       width: 50px;
+   }
+   .sidebar a {
+       font-size: 10px;
+       height: 50px;
+       margin: 10px 0;
+   }
+  
+   .sidebar a i {
+       font-size: 24px;
+   }
+}

@@ -65,7 +65,6 @@ const Join = () => {
           <Form.Label>Nombre</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Introduce tu nombre"
             value={firstName}
             onChange={handleFirstNameChange}
             required
@@ -80,7 +79,6 @@ const Join = () => {
           <Form.Label>Apellidos</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Introduce tus apellidos"
             value={lastName}
             onChange={handleLastNameChange}
             required
@@ -95,9 +93,8 @@ const Join = () => {
           <Form.Label>Alias</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Introduce tu alias"
-            value={userName}
-            onChange={handleUserNameChange}
+            value={username}
+            onChange={handleUsernameChange}
             required
             style={{ width: "150%" }}
           />
@@ -110,7 +107,6 @@ const Join = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
-            placeholder="Introduce tu email"
             value={email}
             onChange={handleEmailChange}
             required
@@ -125,7 +121,6 @@ const Join = () => {
           <Form.Label>Contraseña</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Introduce contraseña"
             value={password}
             onChange={handlePasswordChange}
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
