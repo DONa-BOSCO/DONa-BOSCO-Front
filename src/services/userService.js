@@ -89,4 +89,6 @@ export const loginUser = async(data) => {
         })
     } 
     return dataResponse;
+    
 };
+
