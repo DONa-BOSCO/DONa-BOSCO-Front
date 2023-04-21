@@ -7,6 +7,7 @@ import ProductModalUser from '../components/ProductModalUser';
 import './Stylesheet/DashboardUser.css';
 import { productService } from "../services/productService.js";
 
+
 function Dashboard() {
 
   const [productsData, setProductsData] = useState([]);
@@ -26,7 +27,7 @@ function Dashboard() {
   const [productModal, setProductModal] = useState({});
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
-    setProductModal(productsData.find(product => product.producItem.id == productId));  
+    setProductModal(productsData.find(product => product.producItem.id == productId));
     setShow(true)
   };
 
@@ -50,16 +51,20 @@ function Dashboard() {
     getProducts()
   }, [])
 
+  const isLogged = JSON.parse(localStorage.getItem("userData"));
+  console.log(isLogged);
+
   return (
     <>
       <div className="container-gn" id="text">
         <br />
+        {isLogged ? <h3>La persona esta loggeada</h3> : <h3>La persona no está loggeada</h3>}
         <h1> Todos los Productos </h1>
         <div className="container-bar">
           <label htmlFor="category-select"></label>
-          <select id="category-select" className="btn btn-custom"onChange={handleCategoryChange}>
-          <option value="">Selecciona por categoría </option>
-          <option value="Ropa y accesorios">Ropa y accesorios</option>
+          <select id="category-select" className="btn btn-custom" onChange={handleCategoryChange}>
+            <option value="">Selecciona por categoría </option>
+            <option value="Ropa y accesorios">Ropa y accesorios</option>
             <option value="Electrodomesticos">Electrodomésticos</option>
             <option value="Informatica y electrónica">Informatica y electrónica</option>
             <option value="Deporte y ocio">Deporte y ocio</option>
@@ -71,8 +76,8 @@ function Dashboard() {
             <option value="">Todos los productos</option>
           </select>
         </div>
-
-
+        <div>
+         </div>
         <div className="cards">
           {data.map((product) => {
             return (

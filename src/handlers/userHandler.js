@@ -49,19 +49,19 @@ export const userHandler = {
 
         return userService.updateUser(id, updatedUserRequestModel);
     },
-    loginUser(newUser) {
-        if (!newUser) {
-            return;
-        }
+    // loginUser(newUser) {
+    //     if (!newUser) {
+    //         return;
+    //     }
 
-        let LoginRequest = {
+    //     let LoginRequest = {
                
-                "email": newUser.email,
-                "password": newUser.password,
+    //             "email": newUser.email,
+    //             "password": newUser.password,
 
-        }
+    //     }
    
-        return userService.loginUser(LoginRequest);
+    //     return userService.loginUser(LoginRequest);
 
-    },
+    // },
 }
