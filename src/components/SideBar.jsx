@@ -6,8 +6,8 @@ import "./Stylesheet/Sidebar.css"
 
 const Sidebar = () => {
   return (
-    <div className="sidebar"  style={{position: 'fixed'}}>
-      <NavLink activeClassName="active" exact to="/miPerfil">
+    <div className="sidebar">
+      <NavLink activeClassName="active" exact to='/userprofileview'>
       <BsFillPersonFill /> Mi perfil
       </NavLink>
       <NavLink activeClassName="active" to="/misProductos">

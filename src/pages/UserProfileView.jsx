@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import './styleSheetPages/UserProfileView.css';
-import { GrFavorite } from 'react-icons/gr';
-import { GoMail } from 'react-icons/go';
-
+import SideBar from '../components/SideBar';
+import "./Stylesheet/UserProfileView.css";
 
 const UserProfile= () => {
 
@@ -43,18 +41,15 @@ const UserProfile= () => {
     <h1 className="text-center profile-headline">My Account </h1>
     
     <div className="container-form" >
-      <form onSubmit={handleSubmit}  itemID="form1">
+      <form onSubmit={handleSubmit}  itemID="form1" className="bg-secondary">
       <div className="row"> 
         <div className="col-md-5 text-dark" > 
         <div className="profile">
 
-          <img src="https://i.imgur.com/JgYD2nQ.jpg" className="rounded-circle" style={{width: 150}}></img>
-          <button className="btn btn-primary" type="button" style={{backgroundColor: "#CB5F5F", marginTop: 30}}>UNPLOAD NEW PHOTO</button>
+          <img src="https://user-images.githubusercontent.com/117834362/233957884-8aa4ced0-6526-4d35-b74e-d31b6dcaa667.jpg" className="rounded-circle" style={{width: 175}}></img>
+          <button className="btn btn-primary" type="button" style={{backgroundColor: "#CB5F5F", marginTop: 30}}>Subir Nueva Imagen</button>
         </div>
-        <div style={{marginTop: 20}}> 
-         <p  name="document-text-outline"><GrFavorite/> Wish List</p>
-         <p  name="document-text-outline"><GoMail/> MailBox </p>    
-        </div>      
+            
         </div>
          <div className="col-md-7">
 
