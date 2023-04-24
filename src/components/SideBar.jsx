@@ -27,8 +27,8 @@ const Sidebar = () => {
                 <AiOutlineHeart /> Ya Donados
             </NavLink>
             <button className="btn-out" onClick={handleLogout}>
-                <span><AiOutlineLogout /></span>
-                <span>Cerrar Sesión</span>
+                <AiOutlineLogout />
+                Cerrar Sesión
             </button>
         </div>
     );
