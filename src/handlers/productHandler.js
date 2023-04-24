@@ -17,6 +17,7 @@ export const productHandler = {
                 "category": newProduct.category,
                 "location": newProduct.location,
                 "condition": newProduct.condition,
+                "email": newProduct.email
             },
 
             "fileData": {
@@ -54,6 +55,7 @@ export const productHandler = {
                 "category": updatedProduct.category,
                 "location": updatedProduct.location,
                 "condition": updatedProduct.condition,
+                "email": updatedProduct.email
             },
 
             "fileData": {

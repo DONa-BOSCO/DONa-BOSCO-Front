@@ -10,6 +10,7 @@ const CreateProduct = () => {
   const [condition, setCondition] = useState("");
   const [location, setLocation] = useState("");
   const [category, setCategory] = useState("");
+  const [email, setEmail] = useState("");
 
   let [newProduct, setNewProduct] = useState({});
 
@@ -33,6 +34,10 @@ const CreateProduct = () => {
     setCategory(event.target.value);
   };
 
+  const handleEmailChange = (event) => {
+    setCategory(event.target.value);
+  };
+
 
   const handleImgChange = (event) => {
     const file = event.target.files[0];
@@ -45,7 +50,7 @@ const CreateProduct = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let newProduct = { title, description, img, condition, location, category };
+    let newProduct = { title, description, img, condition, location, category, email };
     productHandler.addProduct(newProduct);
     event.target.reset()
   };
@@ -159,9 +164,16 @@ const CreateProduct = () => {
         </div>
 
         <div className="mb-3">
+          <label className="form-label" htmlFor="email">Email</label>
+          <input name="email" type="email" className="form-control" placeholder="Email" onChange={handleEmailChange} required />
+        </div>
+
+        <div className="mb-3">
           <label htmlFor="img" className="form-label">Foto</label>
           <input name="img" type="file" className="form-control" placeholder="Upload a picture" onChange={handleImgChange} required />
         </div>
+
+      
 
         <button type="submit" className="btn btn-custom" id="btn" onClick={handleShow}>Subir</button>
       </form>

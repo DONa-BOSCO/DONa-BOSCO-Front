@@ -10,6 +10,7 @@ import Login from '../pages/Login'
 import DashboardUser from '../pages/DashboardUser'
 import DashboardAdmin from '../pages/DashboardAdmin'
 import Contact from "../pages/Contact";
+import Chat from '../pages/Chat'
 
 
 export const router = createBrowserRouter([
@@ -54,6 +55,12 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />,
+                
+            },
+
+            {
+                path: '/chat',
+                element: <Chat />,
                 
             },
             
