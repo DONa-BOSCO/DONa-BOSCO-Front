@@ -8,6 +8,7 @@ import './Stylesheet/DashboardUser.css';
 import { productService } from "../services/productService.js";
 import SideBar from "../components/SideBar";
 import { Container } from "react-bootstrap";
+import { IoLocationOutline } from 'react-icons/io5';
 
 
 function Dashboard() {
@@ -57,16 +58,16 @@ function Dashboard() {
   console.log(isLogged);
 
   return (
-    
+
     <>
-       <SideBar />
+      <SideBar />
       <div className="d-flex mt-5">
-       
+
         <Container>
           <div className="container-gn" id="text">
             <br />
             {isLogged ? <h3>La persona esta loggeada</h3> : <h3>La persona no está loggeada</h3>}
-            <h1> Todos los Productos </h1>
+            <h1 style={{ marginLeft: '110px' }}> Todos los Productos </h1>
             <div className="container-bar">
               <label htmlFor="category-select"></label>
               <select id="category-select" className="btn btn-custom" onChange={handleCategoryChange}>
@@ -96,15 +97,16 @@ function Dashboard() {
                       <Card.Img className="card-img" variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                       <Card.Body>
                         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                          <Card.Title style={{ marginRight: '1rem' }}><b>{product.producItem.title}</b></Card.Title>
-                          <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                          <Card.Title style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '0.5rem' }}>{product.producItem.title}</Card.Title>
+
                         </div>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.category}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.description}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.condition}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.location}</Card.Subtitle>
 
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold' }}>{product.producItem.category}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
 
+                        <Button variant="light" alignItems="right" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
                       </Card.Body>
                     </Card>
 

@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card";
 import { productService } from "../services/productService.js";
 import Button from "react-bootstrap/Button";
 import { BsEye } from "react-icons/bs";
+import { IoLocationOutline } from 'react-icons/io5';
 
 
 const Home = () => {
@@ -95,7 +96,7 @@ const Home = () => {
 
 
               <div className="cards">
-               {data.slice(0, 4).map((product) => {
+                {data.slice(0, 4).map((product) => {
                   return (
                     <>
                       <ProductModalUser
@@ -103,7 +104,7 @@ const Home = () => {
                         handleClose={handleClose}
                         productModal={productModal}
                       />
-                      <Card border="light" style={{ width: "16rem" }}>
+                      <Card border="light" style={{ width: "20rem" }}>
                         <Card.Img
                           className="card-img"
                           variant="top"
@@ -123,25 +124,19 @@ const Home = () => {
                             <Card.Title style={{ marginRight: "1rem" }}>
                               <b>{product.producItem.title}</b>
                             </Card.Title>
-                            <Button
-                              variant="light"
-                              onClick={() => handleShow(product.producItem.id)}
-                            >
-                              <BsEye /> Ver{" "}
-                            </Button>
+
                           </div>
-                          <Card.Subtitle className="mb-2 text-muted">
-                            {product.producItem.category}
-                          </Card.Subtitle>
-                          <Card.Subtitle className="mb-2 text-muted">
-                            {product.producItem.description}
-                          </Card.Subtitle>
-                          <Card.Subtitle className="mb-2 text-muted">
-                            {product.producItem.condition}
-                          </Card.Subtitle>
-                          <Card.Subtitle className="mb-2 text-muted">
-                            {product.producItem.location}
-                          </Card.Subtitle>
+                          <Card.Subtitle className="mt-1 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold' }}>{product.producItem.category}</Card.Subtitle>
+                          {/* <Card.Subtitle className="mt-1 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle> */}
+                          {/* <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle> */}
+                          <Card.Subtitle className="mt-3 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
+                          <Button
+                            className="mt-3"
+                            variant="light"
+                            onClick={() => handleShow(product.producItem.id)}
+                          >
+                            <BsEye /> Ver{" "}
+                          </Button>
                         </Card.Body>
                       </Card>
                     </>
@@ -162,7 +157,7 @@ const Home = () => {
 
                 </div>
               </div>
-              
+
             </div>
           </Container>
         </div>

@@ -49,9 +49,10 @@ const ProductModalAdm = ({ show, handleClose, productModal, handleUpdate }) => {
             <div id="modal" className="modal-body" style={{ width: '100%' }}>
           <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <img variant="top" style={{ width: '350px' }} src={buildImg(productModal?.base64FileModel?.extension, productModal?.base64FileModel?.content)} />
-          </div>
-          <p className='text-center' style={{ marginTop: '20px' }}>{productModal?.producItem?.description}</p>
+          </div> 
           <h4 className='text-center' style={{ marginTop: '20px' }}>{productModal?.producItem?.title}</h4>
+          <p className='text-center' style={{ marginTop: '20px' }}>{productModal?.producItem?.description}</p>
+         
 
                     <Table striped bordered hover>
                         <tbody>

@@ -3,7 +3,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { useLoaderData, Link } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
-import { BsEye, BsPencilSquare, BsTrash, BsX } from 'react-icons/bs';
+import { BsEye, BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
+import { IoLocationOutline } from 'react-icons/io5';
 import './Stylesheet/DashboardAdmin.css'
 import ProductModalAdm from "../components/ProductModalAdm";
 import ButtonNewProduct from '../components/ButtonNewProduct';
@@ -13,13 +14,13 @@ import { productService } from "../services/productService";
 
 
 function Dashboard() {
-   
+
   const [productsData, setProductsData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const data = productsData.filter((product) => {
     return product.producItem.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.producItem.location.toLowerCase().includes(searchQuery.toLowerCase())
-    } );
+      product.producItem.location.toLowerCase().includes(searchQuery.toLowerCase())
+  });
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -62,40 +63,46 @@ function Dashboard() {
 
   useEffect(() => {
     getProducts()
-  },[])
- 
+  }, [])
+  
+
 
   return (
     <>
       <div className="container-gn">
         <br />
-        <h1 style={{marginLeft:'200px'}}> Todos los productos </h1>
+        <h1> Todos los productos </h1>
         <div className="container-bar">
-        
+
           <input className="searchStyle" type="text" placeholder="Busca por nombre de producto o localización" value={searchQuery}
-            onChange={handleSearchChange}/>
-        
+            onChange={handleSearchChange} />
+
         </div>
         <ButtonNewProduct />
-        <div className="cards">
+        <div className="cardsAdmin">
           {data.map((product) => {
             return (
               <React.Fragment key={product.producItem.id}>
-                <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal}/> 
+                <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal} />
                 <ProductModalAdm show={show} handleClose={handleClose} productModal={productModal} />
-                <Card border="light" style={{ width: '18rem' }}>
-                  <Card.Img  variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
+                <Card border="light" style={{ width: '17rem' }}>
+                  <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                   <Card.Body>
-                    <Card.Title>{product.producItem.title} </Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{product.producItem.category}</Card.Subtitle>
-                    <Card.Subtitle className="mb-2 text">{product.producItem.description}</Card.Subtitle>
-                    <Card.Subtitle className="mb-2 text-muted">{product.producItem.condition}</Card.Subtitle>
-                    <Card.Subtitle className="mb-2 text-muted">{product.producItem.location}</Card.Subtitle>
-                    <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
-                    <Link to={`/dashboardadmin/editProduct/${product.producItem.id}`}>
-                      <Button variant="light" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare/> Edit </Button>
-                    </Link> 
-                    <Button variant="light" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Eliminar </Button>
+                    <Card.Title style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '1rem' }}>{product.producItem.title}</Card.Title>
+                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold'}}>{product.producItem.category}</Card.Subtitle>
+                    <Card.Subtitle className="mt-2 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle>
+                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
+                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
+
+              <br />
+                    <div style={{ display: 'flex', justifyContent: "space-between" }}>
+                      <Button variant="light" style={{backgroundColor:'#f8f8f87e'}} size="sm" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                      <Link to={`/dashboardadmin/editProduct/${product.producItem.id}`}>
+                        <Button variant="light" size="sm" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare /> Edit </Button>
+                      </Link>
+                      <Button variant="light" size="sm" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Eliminar </Button>
+                    </div>
+
                   </Card.Body>
                 </Card>
               </React.Fragment>
@@ -115,7 +122,7 @@ function Dashboard() {
       </div>
     </>
   );
-  
-  }
-  export default Dashboard;
-  
+
+}
+export default Dashboard;
+
