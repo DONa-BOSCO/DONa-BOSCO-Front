@@ -14,7 +14,7 @@ form{
 }
 
 .profile-headline {
-    padding-top: 30px; 
+    padding-top: 10px; 
     color: white; 
 }
 
@@ -28,6 +28,8 @@ border-radius: 1.25rem;
   position: sticky;
   top: .3125rem;
   margin-left: .5rem;
+  margin-bottom: 50px;
+
 } 
 
 
@@ -52,4 +54,13 @@ border-radius: 1.25rem;
 
 .div3 { margin: 30px;} 
 
+
+.btn-sm {
+    max-width: 200px;
+  }
+
+  .container-textos {
+    padding-left: 55px; /* ajustar el valor de acuerdo al ancho del sidebar */
+  }
+  
   
