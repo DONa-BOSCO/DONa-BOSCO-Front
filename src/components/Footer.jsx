@@ -23,13 +23,3 @@ function Footer() {
 }
 
 export default Footer;
-<footer>
-           
-<ul>
-    <li> Aviso legal</li>
-    <li> Cookies</li>
-    <li>Politica de privacidad</li>
-    <li>Contacta</li>
-    <li> © 2023 CEIP Camaleón</li>
-</ul>
-</footer>

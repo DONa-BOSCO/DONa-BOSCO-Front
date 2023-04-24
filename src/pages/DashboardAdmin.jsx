@@ -69,7 +69,7 @@ function Dashboard() {
     <>
       <div className="container-gn">
         <br />
-        <h1> Todos los productos </h1>
+        <h1 style={{marginLeft:'200px'}}> Todos los productos </h1>
         <div className="container-bar">
         
           <input className="searchStyle" type="text" placeholder="Busca por nombre de producto o localización" value={searchQuery}
@@ -88,7 +88,7 @@ function Dashboard() {
                   <Card.Body>
                     <Card.Title>{product.producItem.title} </Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">{product.producItem.category}</Card.Subtitle>
-                    <Card.Subtitle className="mb-2 text-muted">{product.producItem.description}</Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text">{product.producItem.description}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">{product.producItem.condition}</Card.Subtitle>
                     <Card.Subtitle className="mb-2 text-muted">{product.producItem.location}</Card.Subtitle>
                     <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
