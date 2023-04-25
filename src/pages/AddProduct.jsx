@@ -45,7 +45,7 @@ const CreateProduct = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let newProduct = { title, description, img, condition, location, category };
+    let newProduct = { title, description, img, condition, location, category, };
     productHandler.addProduct(newProduct);
     event.target.reset()
   };

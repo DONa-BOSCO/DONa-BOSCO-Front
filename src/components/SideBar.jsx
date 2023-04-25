@@ -10,7 +10,7 @@ const Sidebar = () => {
 
     const [isLoggedIn, setLoggedIn] = useState(true);
     const handleLogout = () => {
-        localStorage.removeItem('nombreDelToken');
+        localStorage.removeItem('userdata');
         setLoggedIn(false);
         window.location.href = '/login';
     };

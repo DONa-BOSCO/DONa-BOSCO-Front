@@ -17,6 +17,7 @@ export const productHandler = {
                 "category": newProduct.category,
                 "location": newProduct.location,
                 "condition": newProduct.condition,
+                "userId" : newProduct.userId,
             },
 
             "fileData": {
