@@ -47,11 +47,23 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Stylesheet/Header.css'
 
-const Header = () => {
+const Header = () => { 
+ const [auth, setAuth] = useState(localStorage.getItem('userData'));  
+  
+  const [isLoggedIn, setLoggedIn] = useState(localStorage.getItem('userData'));
+  const handleLogout = () => {
+      localStorage.removeItem('userData');
+      setLoggedIn(false);
+
+      window.location.href = '/login';
+  };
+
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,6 +87,7 @@ const Header = () => {
       variant="light"
       style={{ boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)' }}
     >
+    
       <Container>
         <Navbar.Brand>
           <Link to="/">
@@ -90,19 +103,35 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="justify-content-end flex-grow-1 me-5 mt-2">
-          <Nav.Link href="/Contact" className="nav-link-contact"><h5>Contacto</h5></Nav.Link>
+          <Nav.Link href="/Contact" className="nav-link-contact">
+            <h5>Contacto</h5>
+            </Nav.Link>
           </Nav>
-
+{ !isLoggedIn ?
           <Nav>
             <Link to="/Login">
             <Button className="me-4 btn btn-custom nav-btn" style={{ borderColor: '#dc3545' }}>Iniciar Sesión</Button>
             </Link>
           </Nav>
+: null }
+
           <Nav>
             <Link to="/Join">
               <Button className="me-4 btn btn-custom" style={{ borderColor: '#dc3545' }}>Registrar</Button>
             </Link>
           </Nav>
+         
+          <Nav>
+            <Link to="/AddProduct">
+              <Button className="me-4 btn btn-custom" style={{ borderColor: '#dc3545' }}>Añadir Producto</Button>
+            </Link>
+          </Nav>
+          <Nav>
+         
+              <Button className="me-4 btn btn-custom" onClick={handleLogout} style={{ borderColor: '#dc3545' }}>Cerrar Sesión</Button>
+           
+          </Nav>
+      
         </Navbar.Collapse>
       </Container>
     </Navbar>
