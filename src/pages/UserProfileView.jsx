@@ -60,7 +60,7 @@ const UserProfile = () => {
         <>
             <SideBar />
             <div className="container-textos text">
-                <h2 className="text-center profile-headline text-dark fs-1 fs-md-2 ">Tu Perfil</h2>
+                <h2 className="text-center profile-headline text-dark fs-1 fs-md-3 ">Tu Perfil</h2>
                 <h6 className="text-center profile-headline text-muted fs-4 fs-md-5">Aquí puedes ver y editar los datos de tu perfil</h6>
             </div>
 

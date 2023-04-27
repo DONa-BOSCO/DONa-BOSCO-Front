@@ -17,10 +17,10 @@ padding: 0 50px;
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 800px) {
     .container-form {
-      margin-bottom: 150px;
-      max-width: 100%;
+      margin-bottom: 200px;
+     
     }
   }
   
