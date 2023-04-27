@@ -1,62 +1,58 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import SideBar from '../components/SideBar';
 import "./Stylesheet/UserProfileView.css";
 import { Button } from "react-bootstrap";
 
 const UserProfile = () => {
 
-    const [name, setName] = useState("");
-    const [nick_Name, setNick_Name] = useState("");
-    const [email, setEmail] = useState("");
-    const [description, setDescription] = useState("");
+//     const [name, setName] = useState("");
+//     const [nick_Name, setNick_Name] = useState("");
+//     const [email, setEmail] = useState("");
+//     const [description, setDescription] = useState("");
    
+//     const handleNameChange = (event) => {
+//         let nameInput = event.target.value;
+//         setName(nameInput);
+//     };
+//     const handleNick_NameChange = (event) => {
+//         let nick_NameInput = event.target.value;
+//         setNick_Name(nick_NameInput);
+//     };
+//     const handleEmail_EmailChange = (event) => {
+//         let emailInput = event.target.value;
+//         setEmail(emailInput);
+//     };
+//     const handleDescription_DescriptionChange = (event) => {
+//         let descriptionInput = event.target.value;
+//         setDescription(descriptionInput);
+//     };
+
+//     const handleImageChange = (event) => {
+//         const image = event.target.files[0];
+//         const formData = new FormData();
+//         formData.append('image', image);
+
+//         fetch('/api/upload-image', {
+//             method: 'POST',
+//             body: formData
+//         })
+//             .then(response => {
+//                 // handle response from server
+//             })
+//             .catch(error => {
+//                 // handle error
+//             });
+//     }
 
 
 
 
-    const handleNameChange = (event) => {
-        let nameInput = event.target.value;
-        setName(nameInput);
-    };
-    const handleNick_NameChange = (event) => {
-        let nick_NameInput = event.target.value;
-        setNick_Name(nick_NameInput);
-    };
-    const handleEmail_EmailChange = (event) => {
-        let emailInput = event.target.value;
-        setEmail(emailInput);
-    };
-    const handleDescription_DescriptionChange = (event) => {
-        let descriptionInput = event.target.value;
-        setDescription(descriptionInput);
-    };
-
-    const handleImageChange = (event) => {
-        const image = event.target.files[0];
-        const formData = new FormData();
-        formData.append('image', image);
-
-        fetch('/api/upload-image', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                // handle response from server
-            })
-            .catch(error => {
-                // handle error
-            });
-    }
-
-
-
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        let newUserProfile = { name, nick_Name, email, description };
-        userProfileHandler.addUserProfile(newUserProfile);
-        event.target.reset()
-    };
+//     const handleSubmit = (event) => {
+//         event.preventDefault();
+//         let newUserProfile = { name, nick_Name, email, description };
+//         userProfileHandler.addUserProfile(newUserProfile);
+//         event.target.reset()
+//     };
 
 
 
@@ -69,17 +65,17 @@ const UserProfile = () => {
             </div>
 
             <div className="container-form" >
-                <form onSubmit={handleSubmit} itemID="form1" className="bg-secondary">
+                <form  itemID="form1" className="bg-secondary">
                     <div className="text-center text-dark">
                         <p>Información</p>
                     </div>
                     <div className="row">
-                        <div className="col-md-5 text-dark fs-4 fs-md-5" >
+                        {/* <div className="col-md-5 text-dark fs-4 fs-md-5" >
 
                         
 
-                        </div>
-                        <div className="col-md-7 ">
+                        </div> */}
+                        {/* <div className="col-md-7 "> */}
 
 
                             <div>
@@ -95,7 +91,7 @@ const UserProfile = () => {
                                     <Button className="btn btn-custom btn-sm mt-3 fs-7 fs-md-5 text-center" type="submit" id="btn">Cerrar Sesión</Button>
                                 </div>
                             </div>
-                        </div>
+                        {/* </div> */}
                     </div>
                 </form>
             </div>
