@@ -124,7 +124,7 @@ const Header = () => {
             : null}
 
 {isLoggedIn ? (
-          <Nav.Link to="/DashboardUser">
+          <Nav.Link href="/DashboardUser">
            
             <Button variant="outline mt-1">
              
