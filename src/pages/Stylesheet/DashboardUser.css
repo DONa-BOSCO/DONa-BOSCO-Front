@@ -212,4 +212,8 @@
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
   }
+  .btn2:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
   

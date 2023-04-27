@@ -102,7 +102,7 @@ exports[`Show navbar contact > renders text correctly 1`] = `
               href="/"
             >
               <img
-                alt="React Bootstrap logo"
+                alt="Dona Bosco logo"
                 height="60"
                 src="/logo.png"
                 width="120"
@@ -124,7 +124,7 @@ exports[`Show navbar contact > renders text correctly 1`] = `
             id="responsive-navbar-nav"
           >
             <div
-              class="justify-content-end flex-grow-1 me-5 mt-2 navbar-nav"
+              class="justify-content-end flex-grow-1 me-5 mt-4 navbar-nav"
             >
               <a
                 class="nav-link-contact nav-link"
@@ -186,7 +186,7 @@ exports[`Show navbar contact > renders text correctly 1`] = `
             href="/"
           >
             <img
-              alt="React Bootstrap logo"
+              alt="Dona Bosco logo"
               height="60"
               src="/logo.png"
               width="120"
@@ -208,7 +208,7 @@ exports[`Show navbar contact > renders text correctly 1`] = `
           id="responsive-navbar-nav"
         >
           <div
-            class="justify-content-end flex-grow-1 me-5 mt-2 navbar-nav"
+            class="justify-content-end flex-grow-1 me-5 mt-4 navbar-nav"
           >
             <a
               class="nav-link-contact nav-link"
