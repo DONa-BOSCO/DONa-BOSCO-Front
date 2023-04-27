@@ -76,12 +76,7 @@ const UserProfile = () => {
                     <div className="row">
                         <div className="col-md-5 text-dark fs-4 fs-md-5" >
 
-                            <div className="profile d-flex flex-column align-items-center fs-4 fs-md-5">
-
-                                <img src="https://user-images.githubusercontent.com/117834362/233957884-8aa4ced0-6526-4d35-b74e-d31b6dcaa667.jpg" className="rounded-circle fs-4 fs-md-5" style={{ width: 180 }}></img>
-                                <Button className="btn btn-custom mt-3 btn-sm mt-3 fs-10 fs-md-5"><input type="file" accept="image/*"  value="" onChange={handleImageChange} />Subir Nueva Imagen</Button>
-
-                            </div>
+                        
 
                         </div>
                         <div className="col-md-7 ">
