@@ -4,8 +4,22 @@ padding: 0 50px;
 }
 
 
+
 @media (max-width: 768px) {
     .flex-column {
+      max-width: 100%;
+    }
+  }
+  
+@media (max-width: 320px) {
+    .flex-column {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .container-form {
+      margin-bottom: 150px;
       max-width: 100%;
     }
   }

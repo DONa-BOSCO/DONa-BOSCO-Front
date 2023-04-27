@@ -98,9 +98,7 @@ const Login = () => {
         </Form.Group>
         <div className="d-flex justify-content-center mt-3">
 
-          <Button className="btn btn-custom" type="submit"id="btn" onClick={handleShow}>
-            Iniciar Sesión
-          </Button>
+         
          
         </div>
       </Form>
