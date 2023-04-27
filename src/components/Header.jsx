@@ -50,15 +50,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import './Stylesheet/Header.css'
 
-const Header = () => { 
- const [auth, setAuth] = useState(localStorage.getItem('userData'));  
-  
+const Header = () => {
+
   const [isLoggedIn, setLoggedIn] = useState(localStorage.getItem('userData'));
   const handleLogout = () => {
-      localStorage.removeItem('userData');
-      setLoggedIn(false);
+    localStorage.removeItem('userData');
+    setLoggedIn(false);
 
-      window.location.href = '/login';
+    window.location.href = '/login';
   };
 
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -87,7 +86,7 @@ const Header = () => {
       variant="light"
       style={{ boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)' }}
     >
-    
+
       <Container>
         <Navbar.Brand>
           <Link to="/">
@@ -95,43 +94,50 @@ const Header = () => {
               src="/logo.png"
               width="120"
               height="60"
-              alt="React Bootstrap logo"
+              alt="Dona Bosco logo"
             />
           </Link>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="justify-content-end flex-grow-1 me-5 mt-2">
-          <Nav.Link href="/Contact" className="nav-link-contact">
-            <h5>Contacto</h5>
+          <Nav className="justify-content-end flex-grow-1 me-5 mt-4">
+            <Nav.Link href="/Contact" className="nav-link-contact">
+              <h5>Contacto</h5>
             </Nav.Link>
           </Nav>
-{ !isLoggedIn ?
-          <Nav>
-            <Link to="/Login">
-            <Button className="me-4 btn btn-custom nav-btn" style={{ borderColor: '#dc3545' }}>Iniciar Sesión</Button>
-            </Link>
-          </Nav>
-: null }
 
-          <Nav>
-            <Link to="/Join">
-              <Button className="me-4 btn btn-custom" style={{ borderColor: '#dc3545' }}>Registrar</Button>
-            </Link>
-          </Nav>
-         
-          <Nav>
-            <Link to="/AddProduct">
-              <Button className="me-4 btn btn-custom" style={{ borderColor: '#dc3545' }}>Añadir Producto</Button>
-            </Link>
-          </Nav>
-          <Nav>
-         
-              <Button className="me-4 btn btn-custom" onClick={handleLogout} style={{ borderColor: '#dc3545' }}>Cerrar Sesión</Button>
+          {!isLoggedIn ?
+            <Nav>
+              <Link to="/Login">
+                <Button className="me-4 btn btn-custom nav-btn" style={{ borderColor: '#dc3545' }}>Iniciar Sesión</Button>
+              </Link>
+            </Nav>
+            : null}
+
+          {!isLoggedIn ?
+            <Nav>
+              <Link to="/Join">
+                <Button className="me-4 btn btn-custom" style={{ borderColor: '#dc3545' }}>Registrar</Button>
+              </Link>
+            </Nav>
+            : null}
+
+{isLoggedIn ? (
+          <Nav.Link to="/DashboardUser">
            
-          </Nav>
-      
+            <Button variant="outline mt-1">
+             
+                <img
+                  src="https://i.pinimg.com/564x/ad/73/1c/ad731cd0da0641bb16090f25778ef0fd.jpg"
+                  alt="My Profile"
+                  style={{ width: '45px', height: '45px', marginRight: '4px', borderRadius: '50px', marginTop: '0px' }} />
+              
+              <h6 style={{ fontSize: '13px', marginTop: '4px', marginBottom: '-5px' }} className="hover--color">Perfil</h6>
+         
+            </Button>
+          </Nav.Link>
+  ) : null}
         </Navbar.Collapse>
       </Container>
     </Navbar>
