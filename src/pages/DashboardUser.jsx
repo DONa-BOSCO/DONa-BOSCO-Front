@@ -9,13 +9,11 @@ import { productService } from "../services/productService.js";
 import SideBar from "../components/SideBar";
 import "../components/Stylesheet/SideBar.css"
 import { Container } from "react-bootstrap";
-<<<<<<< HEAD
 import { IoMdAdd } from "react-icons/io"
 import { Link } from "react-router-dom";
-=======
 import { IoLocationOutline } from 'react-icons/io5';
+import { BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
 
->>>>>>> feature/design-page
 
 function Dashboard() {
 
@@ -125,7 +123,13 @@ function Dashboard() {
                         <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
                         <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
 
-                        <Button variant="light" alignItems="right" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                        <div className="mt-4" style={{ display: 'flex', justifyContent: "space-between" ,}} fixed='bottom'>
+                      <Button variant="light" style={{backgroundColor:'#f8f8f87e'}} size="sm" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                      <Link to={`/dashboardadmin/editProduct/${product.producItem.id}`}>
+                        <Button variant="light" size="sm" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare /> Edit </Button>
+                      </Link>
+                      <Button variant="light" size="sm" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Eliminar </Button>
+                    </div>
                       </Card.Body>
                     </Card>
 
