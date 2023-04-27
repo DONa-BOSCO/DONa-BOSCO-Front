@@ -9,7 +9,8 @@ import { productService } from "../services/productService.js";
 import SideBar from "../components/SideBar";
 import "../components/Stylesheet/SideBar.css"
 import { Container } from "react-bootstrap";
-
+import { IoMdAdd } from "react-icons/io"
+import { Link } from "react-router-dom";
 
 function Dashboard() {
 
@@ -54,20 +55,29 @@ function Dashboard() {
     getProducts()
   }, [])
 
-  
+
 
   return (
-    
+
     <>
-       <SideBar />
-      <div className="d-flex mt-5">
-       
+      <SideBar />
+      <div className="d-flex mt-4">
+
         <Container>
           <div className="container-gn" id="text">
             <br />
-            
-            <h1> Todos los Productos </h1>
-            <div className="container-bar">
+
+            <h2 style={{
+              fontSize: '40px',
+              marginBottom: '40px',
+              color: 'grey',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+              letterSpacing: '3px'
+            }}>Tus Productos</h2>
+
+
+            <div className="container-bar mb-5">
               <label htmlFor="category-select"></label>
               <select id="category-select" className="btn btn-custom" onChange={handleCategoryChange}>
                 <option value="">Selecciona por categoría </option>
@@ -82,6 +92,11 @@ function Dashboard() {
                 <option value="Otros">Otros</option>
                 <option value="">Todos los productos</option>
               </select>
+              <Link to='/AddProduct'>
+                <button className="btn2 btn-custom2 ms-1 " data-tooltip="Añadir Producto"
+                  data-tooltip-location="left" style={{ borderRadius: '150px' }}>
+                  <IoMdAdd size={'25px'} style={{ position: 'relative' }} /></button>
+              </Link>
             </div>
 
 

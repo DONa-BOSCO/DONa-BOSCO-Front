@@ -10,6 +10,7 @@ import ButtonNewProduct from '../components/ButtonNewProduct';
 import Modal from 'react-bootstrap/Modal';
 import EditProduct from '../components/EditProduct';
 import { productService } from "../services/productService";
+import { IoMdAdd } from "react-icons/io"
 
 
 function Dashboard() {
@@ -67,11 +68,22 @@ function Dashboard() {
 
   return (
     <>
-      <div className="container-gn">
+      <div className="container-gn mt-5">
         <br />
-        <h1 style={{marginLeft:'200px'}}> Todos los productos </h1>
+        <h2 style={{
+              fontSize: '40px',
+              marginBottom: '30px',
+              color: 'grey',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+              letterSpacing: '3px'
+            }}>Todos los Productos</h2>
         <div className="container-bar">
-        
+        <Link to='/AddProduct'>
+                <button className="btn3 btn-custom2  " data-tooltip="Añadir Producto"
+                  data-tooltip-location="right" style={{ borderRadius: '150px' }}>
+                  <IoMdAdd size={'25px'} style={{ position: 'relative' }} /></button>
+              </Link>
           <input className="searchStyle" type="text" placeholder="Busca por nombre de producto o localización" value={searchQuery}
             onChange={handleSearchChange}/>
         

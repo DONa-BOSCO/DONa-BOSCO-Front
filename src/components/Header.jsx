@@ -49,6 +49,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import './Stylesheet/Header.css'
+import { FaBars } from 'react-icons/fa';
 
 const Header = () => {
 

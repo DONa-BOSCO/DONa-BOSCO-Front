@@ -85,7 +85,8 @@ function SideBar() {
                     <NavLink activeClassName="active" to="/yaDonados">
                         <AiOutlineHeart size={25} /> Ya Donados
                     </NavLink>
-                    <NavLink className="logout-link" activeClassName="active" onClick={handleLogout}>
+                    
+                    <NavLink className="logout-link" activeClassName="active" onClick={handleLogout} href="/Login">
                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                             <AiOutlineLogout size={25}/>
                             Cerrar Sesión
@@ -113,7 +114,8 @@ function SideBar() {
                                 <AiOutlineHeart size={25} className="icon--color" />
 
                             </NavLink>
-                            <NavLink activeClassName="active" onClick={handleLogout}>
+                
+                            <NavLink activeClassName="active" onClick={handleLogout} href="/Login">
 
                                 <AiOutlineLogout size={25} className="icon--color" />
 
