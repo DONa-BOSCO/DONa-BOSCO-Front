@@ -2,7 +2,10 @@
     height: 100vh;
     position: relative;
 }
-
+h1{
+    position: relative;
+    left: 8.5%;
+}
 .cards {
     display: flex;
     flex-direction: row;
@@ -95,6 +98,10 @@
 }
 
 @media (max-width: 395px) {
+    h1{
+        position: relative;
+        left: 0%;
+    }
     .card {
         width: 80vw;
 
