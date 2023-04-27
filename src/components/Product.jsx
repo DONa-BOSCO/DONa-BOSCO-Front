@@ -19,12 +19,11 @@ return (
    <ProductModalAdm show={show} handleClose={handleClose} product={product} />
     <Card border="light" style={{ width: '18rem' }}>
       <Card.Img variant="top" src={Product.img}  />
-        <Card.Body className='text-center'>
+        <Card.Body>
         <Card.Title>{Product.title} </Card.Title>
         <Card.Subtitle className="mb-2 text-muted">{Product.description}</Card.Subtitle>
         <Button variant="light" onClick={handleShow}><BsSearchHeart/> View </Button>
         <Link to="/ShoppingCart">
-        <Button variant="light"><BsCart3/> Add to cart </Button>
         </Link>
         </Card.Body>
     </Card>

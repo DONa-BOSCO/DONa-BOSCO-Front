@@ -9,8 +9,13 @@ import { productService } from "../services/productService.js";
 import SideBar from "../components/SideBar";
 import "../components/Stylesheet/SideBar.css"
 import { Container } from "react-bootstrap";
+<<<<<<< HEAD
 import { IoMdAdd } from "react-icons/io"
 import { Link } from "react-router-dom";
+=======
+import { IoLocationOutline } from 'react-icons/io5';
+
+>>>>>>> feature/design-page
 
 function Dashboard() {
 
@@ -111,15 +116,16 @@ function Dashboard() {
                       <Card.Img className="card-img" variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                       <Card.Body>
                         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                          <Card.Title style={{ marginRight: '1rem' }}><b>{product.producItem.title}</b></Card.Title>
-                          <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                          <Card.Title style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '0.5rem' }}>{product.producItem.title}</Card.Title>
+
                         </div>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.category}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.description}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.condition}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.location}</Card.Subtitle>
 
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold' }}>{product.producItem.category}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
 
+                        <Button variant="light" alignItems="right" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
                       </Card.Body>
                     </Card>
 
