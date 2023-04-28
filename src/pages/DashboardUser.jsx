@@ -123,7 +123,7 @@ function Dashboard() {
                   <>
               <React.Fragment key={product.producItem.id}>
                 <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal} />
-                <ProductModalAdm show={show} handleClose={handleClose} productModal={productModal} />
+                <ProductModal show={show} handleClose={handleClose} productModal={productModal} />
                 <Card border="light" style={{ width: '17rem' }}>
                   <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                   <Card.Body>
@@ -154,6 +154,16 @@ function Dashboard() {
             </div>
           </div>
         </Container>
+        <Modal show={showConfirmation} onHide={handleCloseConfirmation} className="my-modal">
+          <Modal.Header closeButton>
+            <Modal.Title>Confirmar la eliminación</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>¿Quieres eliminar el producto definitivamente?</Modal.Body>
+          <Modal.Footer>
+            <Button variant="light" onClick={() => handleCloseConfirmation()} className="my-button"><BsX /> Cancelar </Button>
+            <Button variant="light" onClick={() => deleteProduct(productIdToDelete)} className="my-button"><BsTrash /> Eliminar </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </>
 
