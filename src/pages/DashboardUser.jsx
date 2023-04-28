@@ -24,19 +24,31 @@ function Dashboard() {
     setSelectedCategory(event.target.value);
   };
 
-  const data = productsData.filter((product) => {
-    const lowerCaseCategory = product.producItem.category.toLowerCase();
-    const isCategoryMatch = selectedCategory ? lowerCaseCategory === selectedCategory.toLowerCase() : true;
-    return isCategoryMatch;
-  });
-
+  const deleteProduct = async (id) => {
+    await productHandler.deleteProduct(id);
+    setProductsData(productsData.filter(product => product.producItem.id !== id));
+    handleCloseConfirmation();
+  };
   const [show, setShow] = useState(false);
   const [productModal, setProductModal] = useState({});
   const handleClose = () => setShow(false);
   const handleShow = (productId) => {
     setProductModal(productsData.find(product => product.producItem.id == productId));
-    setShow(true)
+    setShow(true);
   };
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [productIdToDelete, setProductIdToDelete] = useState(null);
+  const handleCloseConfirmation = () => setShowConfirmation(false);
+  const handleShowConfirmation = (productId) => {
+    setProductIdToDelete(productId);
+    setShowConfirmation(true);
+  };
+
+  const [showModal, setShowModal] = useState(false)
+  const handleCloseModal = () => setShowModal(false)
+  const handleOpenModal = (productId) => {
+    setProductModal(productsData.find(product => product.producItem.id == productId));
+  }
 
   async function getProducts() {
     var resultList = await productService.getProducts();
@@ -47,17 +59,10 @@ function Dashboard() {
     return "data:" + extension + ";base64," + content;
   }
 
-  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
-  const addToCart = async (product) => {
-    console.log("cart product array", cartProducts);
-    cartProducts.push(product);
-    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-  }
-
   useEffect(() => {
     getProducts()
   }, [])
-
+  
 
 
   return (
@@ -108,30 +113,31 @@ function Dashboard() {
                 return (
 
                   <>
+              <React.Fragment key={product.producItem.id}>
+                <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal} />
+                <ProductModalAdm show={show} handleClose={handleClose} productModal={productModal} />
+                <Card border="light" style={{ width: '17rem' }}>
+                  <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
+                  <Card.Body>
+                    <Card.Title style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '1rem' }}>{product.producItem.title}</Card.Title>
+                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold'}}>{product.producItem.category}</Card.Subtitle>
+                    <Card.Subtitle className="mt-2 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle>
+                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
+                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
 
-                    <ProductModalUser show={show} handleClose={handleClose} productModal={productModal} />
-                    <Card border="light" style={{ width: '18rem' }}>
-                      <Card.Img className="card-img" variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
-                      <Card.Body>
-                        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                          <Card.Title style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '0.5rem' }}>{product.producItem.title}</Card.Title>
-
-                        </div>
-
-                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold' }}>{product.producItem.category}</Card.Subtitle>
-                        <Card.Subtitle className="mt-2 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle>
-                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
-                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
-
-                        <div className="mt-4" style={{ display: 'flex', justifyContent: "space-between" ,}} fixed='bottom'>
+              <br />
+                    <div style={{ display: 'flex', justifyContent: "space-between" }}>
                       <Button variant="light" style={{backgroundColor:'#f8f8f87e'}} size="sm" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
                       <Link to={`/dashboardadmin/editProduct/${product.producItem.id}`}>
                         <Button variant="light" size="sm" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare /> Edit </Button>
                       </Link>
                       <Button variant="light" size="sm" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Eliminar </Button>
                     </div>
-                      </Card.Body>
-                    </Card>
+
+                  </Card.Body>
+                </Card>
+              </React.Fragment>
+         
 
                   </>
 
