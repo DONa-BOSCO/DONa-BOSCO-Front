@@ -77,7 +77,7 @@ function SideBar() {
                         backgroundColor: "#DC001B",
                     }}
                 >
-                    <NavLink activeClassName="active" exact to="/miPerfil">
+                    <NavLink activeClassName="active" exact to="/UserProfileView">
                         <BsFillPersonFill size={25} /> Mi perfil
                     </NavLink>
                     <NavLink activeClassName="active" to="/misProductos">
@@ -103,7 +103,7 @@ function SideBar() {
                     <Container className="d-flex flex-column flex-md-row">
                         <Nav className="w-100 justify-content-around flex-row">
 
-                            <NavLink activeClassName="active" exact to="/miPerfil">
+                            <NavLink activeClassName="active" exact to="/UserProfileView">
                                 <BsFillPersonFill size={25} className="icon--color" style={{ fontSize: '2.5rem', animation: 'rotate 2s linear infinite' }} />
 
                             </NavLink>

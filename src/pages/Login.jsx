@@ -98,9 +98,11 @@ const Login = () => {
           <Form.Check type="checkbox" label="Recordar mis datos" onChange={handleRememberMeChange} />
         </Form.Group>
         <div className="d-flex justify-content-center mt-3">
-        <Button className="btn btn-custom" type="submit"id="btn" onClick={handleShow}>
+
+          <Button className="btn btn-custom" type="submit"id="btn" onClick={handleShow}>
             Iniciar Sesión
-          </Button> 
+          </Button>
+         
         </div>
       </Form>
     </Container>

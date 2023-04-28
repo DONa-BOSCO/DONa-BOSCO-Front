@@ -13,6 +13,7 @@ import { IoMdAdd } from "react-icons/io"
 import { Link } from "react-router-dom";
 import { IoLocationOutline } from 'react-icons/io5';
 import { BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
+import Modal from 'react-bootstrap/Modal';
 
 
 function Dashboard() {
@@ -52,6 +53,25 @@ function Dashboard() {
     console.log("cart product array", cartProducts);
     cartProducts.push(product);
     localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  }
+  const deleteProduct = async (id) => {
+    await productHandler.deleteProduct(id);
+    setProductsData(productsData.filter(product => product.producItem.id !== id));
+    handleCloseConfirmation();
+  };
+
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [productIdToDelete, setProductIdToDelete] = useState(null);
+  const handleCloseConfirmation = () => setShowConfirmation(false);
+  const handleShowConfirmation = (productId) => {
+    setProductIdToDelete(productId);
+    setShowConfirmation(true);
+  };
+
+  const [showModal, setShowModal] = useState(false)
+  const handleCloseModal = () => setShowModal(false)
+  const handleOpenModal = (productId) => {
+    setProductModal(productsData.find(product => product.producItem.id == productId));
   }
 
   useEffect(() => {
@@ -139,6 +159,16 @@ function Dashboard() {
               })}
             </div>
           </div>
+          <Modal show={showConfirmation} onHide={handleCloseConfirmation} className="my-modal">
+          <Modal.Header closeButton>
+            <Modal.Title>Confirmar la eliminación</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>¿Quieres eliminar el producto definitivamente?</Modal.Body>
+          <Modal.Footer>
+            <Button variant="light" onClick={() => handleCloseConfirmation()} className="my-button"><BsX /> Cancelar </Button>
+            <Button variant="light" onClick={() => deleteProduct(productIdToDelete)} className="my-button"><BsTrash /> Eliminar </Button>
+          </Modal.Footer>
+        </Modal>
         </Container>
       </div>
     </>

@@ -1,14 +1,14 @@
 form{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    background-color: hsl(167, 28%, 87%) !important;
+    
     width: 60vw;
     align-items: left;
     justify-content: left;
     padding: 5vh;
     margin: 5vh;
     border-radius: 5vh;
-    color: white;
+   
     display: flex;
     flex-direction: column; 
 }
