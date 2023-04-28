@@ -9,6 +9,10 @@ import { productService } from "../services/productService.js";
 import SideBar from "../components/SideBar";
 import "../components/Stylesheet/SideBar.css"
 import { Container } from "react-bootstrap";
+import { IoMdAdd } from "react-icons/io"
+import { Link } from "react-router-dom";
+import { IoLocationOutline } from 'react-icons/io5';
+import { BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
 
 
 function Dashboard() {
@@ -54,20 +58,29 @@ function Dashboard() {
     getProducts()
   }, [])
 
-  
+
 
   return (
-    
+
     <>
-       <SideBar />
-      <div className="d-flex mt-5">
-       
+      <SideBar />
+      <div className="d-flex mt-4">
+
         <Container>
           <div className="container-gn" id="text">
             <br />
-            
-            <h1> Todos los Productos </h1>
-            <div className="container-bar">
+
+            <h2 style={{
+              fontSize: '40px',
+              marginBottom: '40px',
+              color: 'grey',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+              letterSpacing: '3px'
+            }}>Tus Productos</h2>
+
+
+            <div className="container-bar mb-5">
               <label htmlFor="category-select"></label>
               <select id="category-select" className="btn btn-custom" onChange={handleCategoryChange}>
                 <option value="">Selecciona por categoría </option>
@@ -82,6 +95,11 @@ function Dashboard() {
                 <option value="Otros">Otros</option>
                 <option value="">Todos los productos</option>
               </select>
+              <Link to='/AddProduct'>
+                <button className="btn2 btn-custom2 ms-1 " data-tooltip="Añadir Producto"
+                  data-tooltip-location="left" style={{ borderRadius: '150px' }}>
+                  <IoMdAdd size={'25px'} style={{ position: 'relative' }} /></button>
+              </Link>
             </div>
 
 
@@ -96,15 +114,22 @@ function Dashboard() {
                       <Card.Img className="card-img" variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                       <Card.Body>
                         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                          <Card.Title style={{ marginRight: '1rem' }}><b>{product.producItem.title}</b></Card.Title>
-                          <Button variant="light" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                          <Card.Title style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '0.5rem' }}>{product.producItem.title}</Card.Title>
+
                         </div>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.category}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.description}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.condition}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">{product.producItem.location}</Card.Subtitle>
 
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold' }}>{product.producItem.category}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
+                        <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
 
+                        <div className="mt-4" style={{ display: 'flex', justifyContent: "space-between" ,}} fixed='bottom'>
+                      <Button variant="light" style={{backgroundColor:'#f8f8f87e'}} size="sm" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                      <Link to={`/dashboardadmin/editProduct/${product.producItem.id}`}>
+                        <Button variant="light" size="sm" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare /> Edit </Button>
+                      </Link>
+                      <Button variant="light" size="sm" onClick={() => handleShowConfirmation(product.producItem.id)}><BsTrash /> Eliminar </Button>
+                    </div>
                       </Card.Body>
                     </Card>
 

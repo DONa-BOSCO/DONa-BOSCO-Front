@@ -14,7 +14,7 @@ function Slide() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Texto</h3>
+          <h3>Dona Bosco</h3>
           <p></p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -26,7 +26,7 @@ function Slide() {
         />
 
         <Carousel.Caption>
-          <h3>Texto</h3>
+          <h3>Dona Bosco</h3>
           <p></p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -38,7 +38,7 @@ function Slide() {
         />
 
         <Carousel.Caption>
-          <h3>Texto</h3>
+          <h3>Dona bosco</h3>
           <p></p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -50,7 +50,7 @@ function Slide() {
         />
 
         <Carousel.Caption>
-          <h3>Texto</h3>
+          <h3>Dona Bosco</h3>
           <p></p>
         </Carousel.Caption>
       </Carousel.Item>
