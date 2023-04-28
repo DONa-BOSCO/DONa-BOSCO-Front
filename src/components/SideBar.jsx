@@ -47,6 +47,7 @@ import { AiOutlineTags, AiOutlineHeart, AiOutlineLogout } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import MediaQuery from "react-responsive";
+import { Link } from "react-router-dom";
 
 function SideBar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -86,12 +87,12 @@ function SideBar() {
                         <AiOutlineHeart size={25} /> Ya Donados
                     </NavLink>
                     
-                    <NavLink className="logout-link" activeClassName="active" onClick={handleLogout} href="/Login">
+                    <Link className="logout-link" activeClassName="active" onClick={handleLogout} to="/">
                         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                             <AiOutlineLogout size={25}/>
                             Cerrar Sesión
                         </div>
-                    </NavLink>
+                    </Link>
 
                 </div>
             </MediaQuery>
@@ -115,7 +116,7 @@ function SideBar() {
 
                             </NavLink>
                 
-                            <NavLink activeClassName="active" onClick={handleLogout} href="/Login">
+                            <NavLink activeClassName="active" onClick={handleLogout} href="/">
 
                                 <AiOutlineLogout size={25} className="icon--color" />
 
