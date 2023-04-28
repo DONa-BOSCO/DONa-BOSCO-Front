@@ -48,6 +48,7 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import MediaQuery from "react-responsive";
 import { Link } from "react-router-dom";
+import './Stylesheet/SideBar.css'
 
 function SideBar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
