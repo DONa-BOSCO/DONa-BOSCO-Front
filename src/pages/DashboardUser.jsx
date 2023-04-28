@@ -13,6 +13,8 @@ import { IoMdAdd } from "react-icons/io"
 import { Link } from "react-router-dom";
 import { IoLocationOutline } from 'react-icons/io5';
 import { BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
+import Modal from 'react-bootstrap/Modal';
+import EditProduct from '../components/EditProduct';
 
 
 function Dashboard() {
@@ -23,6 +25,12 @@ function Dashboard() {
   const handleCategoryChange = (event) => {
     setSelectedCategory(event.target.value);
   };
+
+  const data = productsData.filter((product) => {
+    const lowerCaseCategory = product.producItem.category.toLowerCase();
+    const isCategoryMatch = selectedCategory ? lowerCaseCategory === selectedCategory.toLowerCase() : true;
+    return isCategoryMatch;
+  });
 
   const deleteProduct = async (id) => {
     await productHandler.deleteProduct(id);
