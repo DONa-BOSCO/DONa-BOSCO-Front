@@ -10,6 +10,7 @@ const CreateProduct = () => {
   const [condition, setCondition] = useState("");
   const [location, setLocation] = useState("");
   const [category, setCategory] = useState("");
+  const [email, setEmail] = useState("");
 
   let [newProduct, setNewProduct] = useState({});
 
@@ -33,6 +34,10 @@ const CreateProduct = () => {
     setCategory(event.target.value);
   };
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
 
   const handleImgChange = (event) => {
     const file = event.target.files[0];
@@ -45,9 +50,10 @@ const CreateProduct = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let newProduct = { title, description, img, condition, location, category };
+    let newProduct = { title, description, img, condition, location, category, email };
     productHandler.addProduct(newProduct);
     event.target.reset()
+    console.log(newProduct)
   };
 
   const [show, setShow] = useState(false);
@@ -156,6 +162,11 @@ const CreateProduct = () => {
             <option value="Articulos infantiles">Artículos infantiles</option>
             <option value="Otros">Otros</option>
           </select>
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email</label>
+          <input name="email" type="text" className="form-control" id="email" placeholder="Email donde contactaran por tu producto" onChange={handleEmailChange} required />
         </div>
 
         <div className="mb-3">

@@ -17,15 +17,18 @@ export const productHandler = {
                 "category": newProduct.category,
                 "location": newProduct.location,
                 "condition": newProduct.condition,
+                "email": newProduct.email,
             },
 
             "fileData": {
                 "fileName": newProduct.title + "-Photo",
                 "base64FileContent": imgContent
             },
-
+            
         }
+        console.log(newProductRequestModel);
         return productService.submitProduct(newProductRequestModel);
+        
     },
     async loadProducts() {
         var result = await productService.getProducts();
@@ -54,6 +57,7 @@ export const productHandler = {
                 "category": updatedProduct.category,
                 "location": updatedProduct.location,
                 "condition": updatedProduct.condition,
+                "email": updatedProduct.email,
             },
 
             "fileData": {
