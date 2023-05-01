@@ -77,7 +77,7 @@ const Join = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicLastName" className="d-flex justify-content-center mt-3 ">
-          <Form.Label>Apellidos</Form.Label>
+          <Form.Label>Apellido</Form.Label>
           <Form.Control
             type="text"
             value={lastName}
