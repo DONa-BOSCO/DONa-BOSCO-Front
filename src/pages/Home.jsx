@@ -95,7 +95,7 @@ const Home = () => {
               </div>
 
 
-              <div className="cards">
+              <div className="cards--home">
                 {data.slice(0, 4).map((product) => {
                   return (
                     <>

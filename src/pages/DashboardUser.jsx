@@ -5,7 +5,7 @@ import { useLoaderData, Link } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import { BsEye, BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
 import { IoLocationOutline } from 'react-icons/io5';
-import './Stylesheet/DashboardAdmin.css'
+import './Stylesheet/DashboardUser.css'
 import ProductModalAdm from "../components/ProductModalAdm";
 import ButtonNewProduct from '../components/ButtonNewProduct';
 import Modal from 'react-bootstrap/Modal';
@@ -93,7 +93,7 @@ function Dashboard() {
 
         </div>
         <ButtonNewProduct />
-        <div className="cardsAdmin">
+        <div className="cardsUser">
           {data.map((product) => {
             return (
               <React.Fragment key={product.producItem.id}>
