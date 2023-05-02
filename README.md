@@ -67,7 +67,7 @@
 <p align="center">- Pair Programming.</p>
 
 <h2 align="center"> 👀  Testing:</h2>
-<p align="center">  Tested renderizaion of components (Footer and Header)</p> 
+<p align="center">  Tested renderizaion of components (Footer, Join and Header)</p> 
 <p align="center"> Try running npm run test  </p> 
 
 <h2 align="center">  🧪Next Steps:</h2>
