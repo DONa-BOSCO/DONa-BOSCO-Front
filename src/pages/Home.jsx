@@ -3,7 +3,7 @@ import Slide from "../components/Slide";
 import "./Stylesheet/Home.css";
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
-import ProductModalUser from "../components/ProductModalUser";
+import ProductModalAdm from "../components/ProductModalAdm";
 import Card from "react-bootstrap/Card";
 import { productService } from "../services/productService.js";
 import Button from "react-bootstrap/Button";
@@ -47,12 +47,7 @@ const Home = () => {
       return "data:" + extension + ";base64," + content;
     }
 
-    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
-    const addToCart = async (product) => {
-      console.log("cart product array", cartProducts);
-      cartProducts.push(product);
-      localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
-    };
+  
 
     useEffect(() => {
       getProducts();
@@ -99,7 +94,7 @@ const Home = () => {
                 {data.slice(0, 4).map((product) => {
                   return (
                     <>
-                      <ProductModalUser
+                      <ProductModalAdm
                         show={show}
                         handleClose={handleClose}
                         productModal={productModal}
@@ -127,8 +122,6 @@ const Home = () => {
 
                           </div>
                           <Card.Subtitle className="mt-1 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold' }}>{product.producItem.category}</Card.Subtitle>
-                          {/* <Card.Subtitle className="mt-1 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle> */}
-                          {/* <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle> */}
                           <Card.Subtitle className="mt-3 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
                           <Button
                             className="mt-3"
