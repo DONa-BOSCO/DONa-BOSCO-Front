@@ -9,8 +9,8 @@ import Join from '../pages/Join'
 import Login from '../pages/Login'
 import DashboardUser from '../pages/DashboardUser'
 import DashboardAdmin from '../pages/DashboardAdmin'
-import Contact from "../pages/Contact";
 import UserProfileView from "../pages/UserProfileView"
+import ContactForm from "../pages/ContactForm"
 
 export const router = createBrowserRouter([
     {
@@ -52,8 +52,8 @@ export const router = createBrowserRouter([
                 loader: loaderProducts,
             },
             {
-                path: '/contact',
-                element: <Contact />,
+                path: '/ContactForm',
+                element: <ContactForm />,
                 
             },
             {
