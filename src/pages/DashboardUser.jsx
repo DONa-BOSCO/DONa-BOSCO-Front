@@ -53,9 +53,10 @@ function Dashboard() {
   const handleOpenModal = (productId) => {
     setProductModal(productsData.find(product => product.producItem.id == productId));
   }
-
+  
+  const userId = JSON.parse(localStorage.getItem('userData')).item3;
   async function getProducts() {
-    var resultList = await productService.getProducts();
+    let resultList = await productService.getProductsByUser(userId);
     setProductsData(resultList);
   }
 
@@ -64,10 +65,10 @@ function Dashboard() {
   }
 
   useEffect(() => {
-    getProducts()
-  }, [])
-  
-
+    if (userId !== undefined && userId !== null && userId !== '') {
+      getProducts();
+    }
+  }, [userId]);
 
   return (
     <>
@@ -94,9 +95,9 @@ function Dashboard() {
         </div>
         <ButtonNewProduct />
         <div className="cardsUser">
-          {data.map((product) => {
+        {productsData.map((product) => {
             return (
-              <React.Fragment key={product.producItem.id}>
+              <React.Fragment key={product.id + userId}>
                 <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal} />
                 <ProductModalAdm show={show} handleClose={handleClose} productModal={productModal} />
                 <Card border="light" style={{ width: '17rem' }}>
