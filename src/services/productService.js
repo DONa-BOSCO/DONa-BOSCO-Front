@@ -12,6 +12,7 @@ const apiClient = axios.create({
 )
 
 export const productService = {
+    
     async getProducts() {
         let response = await apiClient.get("/Product/GetAllProduct");
         if (!response==200)
@@ -19,8 +20,24 @@ export const productService = {
                 alert('Hubo un error al traer los productos');
             };
         let allProducts = await response.data;
+        console.log("productos que vienen del servicio", allProducts)
         return allProducts.filter(product => product.producItem.isActive == true);
     },
+
+
+async getProductsByUser(userId) {
+    try {
+        
+      let response = await apiClient.get("/Product/GetProductsByUserId?userId="+userId);
+     
+      let allProducts = response.data;
+      return allProducts.filter(product => product.producItem.isActive == true && product.producItem.userId === userId);  
+    } catch (error) {
+      alert('Hubo un error al traer los productos');
+      return [];
+    }
+   
+  },
 
     async getProduct(id) {
         let response = await apiClient.get("/Product/GetProductById?id=" + id);

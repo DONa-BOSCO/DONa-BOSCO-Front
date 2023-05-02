@@ -36,7 +36,9 @@ const Login = () => {
     try {
       const response = await loginUser(formData);
       localStorage.setItem("userData", JSON.stringify(response));
+      
       navigate('/dashboarduser')
+      
       
     } catch (error) {
       if (error.response) { handleResponseError(error.response); }
