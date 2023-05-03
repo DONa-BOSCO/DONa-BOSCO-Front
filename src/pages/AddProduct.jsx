@@ -64,7 +64,7 @@ const CreateProduct = () => {
     <div className="container-form">
       <form onSubmit={handleSubmit} itemID="form1" enctype="multipart/form-data">
         <h1><b>Información del Producto</b></h1>
-        <Link to="/dashboardadmin"> <button type="submit" className="btn btn-custom" id="btn" href="/dashboardadmin" > Vuelve a tu página </button> </Link>
+        <Link to="/dashboarduser"> <button type="submit" className="btn btn-custom" id="btn" href="/dashboarduser" > Vuelve a tu página </button> </Link>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">Nombre</label>
           <input name="title" type="text" className="form-control" id="input-Title" placeholder="Producto que vas a donar" onChange={handleTitleChange} required />
