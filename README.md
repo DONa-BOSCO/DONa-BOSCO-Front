@@ -1,6 +1,5 @@
 # DONa-BOSCO-Front
-
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+ 
           
  <h2 align="center"> :heart: Welcome to DONa BOSCO</h2>
 
