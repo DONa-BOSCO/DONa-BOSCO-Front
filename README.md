@@ -55,9 +55,11 @@
 <p align="center">1) Clone the repository</p>
 <p align="center">2) npm install</p>
 <p align="center">3) npm run dev</p>
+<p align="center">4) To be able to visualize the products, it is necessary to have the Back-end installed.</p>
 
 
-<h2 align="center"> - How to install the project (Back):</h2>
+
+
 
 
 <h2 align="center"> 📚Methodology:</h2>
