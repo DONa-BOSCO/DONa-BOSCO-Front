@@ -1,0 +1,182 @@
+.cardsAdmin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0%;
+  }
+  
+  .card {
+    position: relative;
+    width: 18rem;
+    height: 600px;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    margin: 1.25rem;
+    color: #000000;
+    background-color: #f8f8f87e;
+   
+  }
+  
+  .img-size {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+   
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 10 10px #f8f8f844;
+  }
+  
+
+
+
+
+.container-gn {
+    color: black;
+    text-align: center;
+    padding-bottom: 20%
+}
+
+.searchStyle {
+    border-radius: 50px;
+    border: 2px solid;
+    border-color: #DC001B;
+    width: 30%;
+    margin-right: 15px ;
+    margin-left: 5px;
+    padding: 5px;
+    padding-left: 1.5rem;
+    position: sticky;
+    top: .5rem;
+   
+}
+
+.my-modal {
+  
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.my-button {
+    margin-right: 10px;
+    border: none;
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.my-button:hover {
+    background-color: #c82333;
+}
+
+.btn3 {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  color:#ffff;
+  background-color: #d00b0b;
+  border-radius: 50px;
+  border-color: transparent;
+}
+.btn3:hover{
+  background-color: #ffff;
+  color: #d00b0b;
+}
+.btn3::after {
+  display: inline-block;
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px);
+  transform: translateY(-50%);
+  padding: 5px;
+  background-color: #fff;
+  color: #d00b0b;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  border:solid;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.btn3:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+  @media (max-width: 414px) {
+    .card {
+      width: 120vw;
+      align-items: center;
+    }
+  
+    .cards {
+      width: 90vw;
+      align-items: center;
+    }
+  
+    .card:hover {
+      opacity: 0.8;
+      cursor: pointer;
+      transform: none;
+      box-shadow: none;
+    }
+  
+    .container-bar {
+      margin-right: 10vh;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 395px) {
+    .card {
+      width: 80vw;
+    }
+  
+    .cards {
+      width: 73vw;
+      margin-left: 1.5rem;
+    }
+  
+    .img-size {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+  @media (max-width: 361px) {
+    .card {
+      width: 100vw;
+    }
+  
+    .cards {
+      width: 75vw;
+      margin-left: 1.5rem;
+    }
+  
+    .img-size {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  
+
+
+
+
+
+
+
+

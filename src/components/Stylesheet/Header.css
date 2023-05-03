@@ -1,0 +1,32 @@
+.nav-btn {
+    margin-right: 1rem;
+  }
+  
+  @media (max-width: 991px) {
+    .nav-btn {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .nav-link-contact::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #dc3545;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav-link-contact:hover::after {
+    width: 100%;
+  }
+  .Navbar .Nav .nav-link:hover {
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+  }
+ 
+  h6:hover {
+    color: #dc3545;
+  }
+
+  
