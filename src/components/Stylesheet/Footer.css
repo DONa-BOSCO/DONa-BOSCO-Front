@@ -8,12 +8,20 @@ padding: 0 50px;
 @media (max-width: 768px) {
     .flex-column {
       max-width: 100%;
+      align-content: center;
+      justify-content: center;
+      padding-left: 25%;
+      padding-right: 25%;
+      
     }
   }
-  
-@media (max-width: 320px) {
+
+  @media (max-width: 425px) {
     .flex-column {
       max-width: 100%;
+      align-items: center;
+      justify-content: center;
+      
     }
   }
 
