@@ -91,7 +91,7 @@ const Home = () => {
 
 
               <div className="cards--home">
-                {data.slice(0, 4).map((product) => {
+                {data.map((product) => {
                   return (
                     <>
                       <ProductModalAdm

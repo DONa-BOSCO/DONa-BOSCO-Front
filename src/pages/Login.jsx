@@ -36,13 +36,18 @@ const Login = () => {
     try {
       const response = await loginUser(formData);
       localStorage.setItem("userData", JSON.stringify(response));
-      navigate('/dashboarduser')
+      if (response.item2 === 1) {
+       
+        navigate('/dashboardadmin');
+      } else if (response.item2 === 2) {
       
+        navigate('/dashboarduser');
+      }
     } catch (error) {
-      if (error.response) { handleResponseError(error.response); }
+      if (error.response) {
+        handleResponseError(error.response);
+      }
     }
-    
-   
   };
 
   const handleResponseError = (response) => {
