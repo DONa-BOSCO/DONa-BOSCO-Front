@@ -83,7 +83,7 @@ In the terminal run git clone command, an paste the HTTPS: https://github.com/DO
 <p align="center"> npm install --save-dev jsdom </p> 
 <p align="center"> npm install --save-dev @testing-library/jest-dom </p> 
 <p align="center">npm instal --save-dev @testing-library/react </p> 
-<p align="center">  Tested renderizaion of components (Footer, Join and Header)</p> 
+<p align="center">  Tested renderization of components (Footer, Join and Header)</p> 
 <p align="center"> Try running npm run test  </p> 
 
 <div align="center"><img src="https://user-images.githubusercontent.com/117834362/235862314-f45290dd-f9cb-4cc6-91b3-141f7c71f74d.png"></div>
