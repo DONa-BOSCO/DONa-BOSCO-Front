@@ -53,10 +53,17 @@
 
 <h2 align="center"> :computer: How to install the project (Front):</h2>
 
-<p align="center">1) Clone the repository</p>
-<p align="center">2) npm install</p>
-<p align="center">3) npm run dev</p>
-<p align="center">4) To be able to visualize the products, it is necessary to have the Back-end installed.</p>
+<p align="center">1) Open Terminal
+In the terminal run git clone command, an paste the HTTPS: https://github.com/DONa-BOSCO/DONa-BOSCO-Front.git</p>
+<p align="center">2)Type in the terminal: npm install and press intro </p>
+<p align="center">3)Type in the terminal: npm i react-router-dom and press intro </p>
+<p align="center">4) npm install react-router-dom</p>
+<p align="center">5)Type in the terminal: npm install react-bootstrap bootstrap and press intro </p>
+<p align="center">6) Type in the terminal: npm install axios and press intro</p>
+<p align="center">7) npm run dev</p>
+<p align="center">8) To be able to visualize the products, it is necessary to have the Back-end installed.</p>
+
+
 
 
 
@@ -70,6 +77,10 @@
 <p align="center">- Pair Programming.</p>
 
 <h2 align="center"> 👀  Testing:</h2>
+<p align="center"> npm install --save-dev vitest </p> 
+<p align="center"> npm install --save-dev jsdom </p> 
+<p align="center"> npm install --save-dev @testing-library/jest-dom </p> 
+<p align="center">npm instal --save-dev @testing-library/react </p> 
 <p align="center">  Tested renderizaion of components (Footer, Join and Header)</p> 
 <p align="center"> Try running npm run test  </p> 
 
