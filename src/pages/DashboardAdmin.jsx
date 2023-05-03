@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useLoaderData, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import { BsEye, BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
 import { IoLocationOutline } from 'react-icons/io5';

@@ -3,11 +3,7 @@ import Swal from 'sweetalert2';
 
 const apiClient = axios.create({
     baseURL: 'https://localhost:7048/',
-    /* withCredentials: true,
-    headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json' */
-    /* } */
+  
 })
 
 export const userService = {

@@ -1,46 +1,3 @@
-/* import { NavLink } from 'react-router-dom';
-import { AiOutlineHeart, AiOutlineTags, AiOutlineLogout } from "react-icons/ai";
-import { BsFillPersonFill } from "react-icons/bs";
-import "./Stylesheet/Sidebar.css"
-import Button from 'react-bootstrap/Button';
-import React, { useState } from 'react';
-
-
-const Sidebar = () => {
-
-    const [isLoggedIn, setLoggedIn] = useState(true);
-    const handleLogout = () => {
-        localStorage.removeItem('userData');
-        setLoggedIn(false);
-        window.location.href = '/login';
-    };
-
-    return (
-        <div className="sidebar" style={{ position: 'fixed', width: '9vw', overflow: 'hidden' }}>
-        <NavLink activeClassName="active" exact to="/miPerfil">
-          <BsFillPersonFill /> Mi perfil
-        </NavLink>
-        <NavLink activeClassName="active" to="/misProductos">
-          <AiOutlineTags /> Por Donar
-        </NavLink>
-        <NavLink activeClassName="active" to="/yaDonados">
-          <AiOutlineHeart /> Ya Donados
-        </NavLink>
-        <NavLink activeClassName="active">
-          <button className="btn-out" onClick={handleLogout}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
-              <AiOutlineLogout  />
-              Cerrar Sesión
-            </div>
-          </button>
-        </NavLink>
-      </div>
-      
-    );
-};
-
-export default Sidebar; */
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineTags, AiOutlineHeart, AiOutlineLogout } from "react-icons/ai";
@@ -68,7 +25,7 @@ function SideBar() {
     return (
         <div>
             <MediaQuery minWidth={768}>
-                {/* barra lateral en pantallas grandes */}
+               
                 <div
                     className="sidebar"
                     style={{
@@ -99,7 +56,7 @@ function SideBar() {
             </MediaQuery>
 
             <MediaQuery maxWidth={767}>
-                {/* sub-navbar en pantallas pequeñas */}
+              
                 <Navbar expand="lg" variant="light" style={{ marginTop: '20px', marginBottom: '-20px' }} >
                     <Container className="d-flex flex-column flex-md-row">
                         <Nav className="w-100 justify-content-around flex-row">

@@ -30,7 +30,7 @@
 }
 
 .card:hover {
-    /* opacity: 0.8; */
+   
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0 10 10px rgba(255, 255, 255, 0.787);
@@ -158,26 +158,6 @@
 
 }
 
-   /* .btn-custom2{
-    width: 34px;
-    height: 34px;
-    color: white;
-    background-color: #d00b0b;
-    border-radius: 50px;
-  } 
-  .btn-custom2:hover{
-    color:#d00b0b;
-
-  }
-  .btn-custom2:hover span {
-    color: #d00b0b;
-    opacity: 100;
-    
-  }  */ /* .my-custom-button:hover {
-    background-color: #dc3545;
-    color: #dc3545;
-  }
-   */
    .btn2 {
     position: relative;
     width: 34px;

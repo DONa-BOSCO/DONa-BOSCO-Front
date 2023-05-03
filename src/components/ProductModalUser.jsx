@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import { productService } from "../services/productService";
 import './Stylesheet/ProductModalUser.css'
-import { Link } from 'react-router-dom';
 import StarRating from './StarRating';
 
 const ProductModalUser = ({ show, handleClose, productModal }) => {
@@ -65,12 +64,6 @@ const ProductModalUser = ({ show, handleClose, productModal }) => {
               </tr>
             </tbody>
           </Table>
-          {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-           <Link to={`/Cart`}>
-              HAY QUE MODIFICAR ESTO 
-              <Button variant="light" onClick={() => addToCart(product)}><BsCart3 /> Reservar</Button>
-            </Link> 
-          </div> */}
         </div>
       </Modal.Body>
     </Modal>

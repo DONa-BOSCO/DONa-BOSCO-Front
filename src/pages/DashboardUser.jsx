@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { useLoaderData, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { productHandler } from "../handlers/productHandler";
 import { BsEye, BsPencilSquare, BsTrash, BsX } from 'react-icons/bs'
 import { IoLocationOutline } from 'react-icons/io5';
@@ -11,7 +11,6 @@ import ButtonNewProduct from '../components/ButtonNewProduct';
 import Modal from 'react-bootstrap/Modal';
 import EditProduct from '../components/EditProduct';
 import { productService } from "../services/productService";
-import { IoMdAdd } from "react-icons/io"
 import SideBar from "../components/SideBar";
 
 
@@ -53,7 +52,7 @@ function Dashboard() {
   const handleOpenModal = (productId) => {
     setProductModal(productsData.find(product => product.producItem.id == productId));
   }
-  
+
   const userId = JSON.parse(localStorage.getItem('userData')).item3;
   async function getProducts() {
     let resultList = await productService.getProductsByUser(userId);
@@ -72,30 +71,25 @@ function Dashboard() {
 
   return (
     <>
-    <SideBar/>
+      <SideBar />
       <div className="container-gn mt-5">
         <br />
         <h2 style={{
-              fontSize: '40px',
-              marginBottom: '30px',
-              color: 'grey',
-              textTransform: 'uppercase',
-              fontWeight: 'bold',
-              letterSpacing: '3px'
-            }}>Todos los Productos</h2>
+          fontSize: '40px',
+          marginBottom: '30px',
+          color: 'grey',
+          textTransform: 'uppercase',
+          fontWeight: 'bold',
+          letterSpacing: '3px'
+        }}>Todos los Productos</h2>
         <div className="container-bar">
-        <Link to='/AddProduct'>
-                <button className="btn3 btn-custom2  " data-tooltip="Añadir Producto"
-                  data-tooltip-location="right" style={{ borderRadius: '150px' }}>
-                  <IoMdAdd size={'25px'} style={{ position: 'relative' }} /></button>
-              </Link>
           <input className="searchStyle" type="text" placeholder="Busca por nombre de producto o localización" value={searchQuery}
             onChange={handleSearchChange} />
 
         </div>
         <ButtonNewProduct />
         <div className="cardsUser">
-        {productsData.map((product) => {
+          {productsData.map((product) => {
             return (
               <React.Fragment key={product.id + userId}>
                 <EditProduct show={showModal} handleClose={handleCloseModal} productModal={productModal} />
@@ -104,14 +98,14 @@ function Dashboard() {
                   <Card.Img variant="top" src={buildImg(product.base64FileModel.extension, product.base64FileModel.content)} />
                   <Card.Body>
                     <Card.Title style={{ fontSize: '22px', fontWeight: 'bold', marginBottom: '1rem' }}>{product.producItem.title}</Card.Title>
-                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold'}}>{product.producItem.category}</Card.Subtitle>
+                    <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem', fontWeight: 'bold' }}>{product.producItem.category}</Card.Subtitle>
                     <Card.Subtitle className="mt-2 text" style={{ fontSize: '1rem' }}>{product.producItem.description}</Card.Subtitle>
                     <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}>{product.producItem.condition}</Card.Subtitle>
                     <Card.Subtitle className="mt-2 text-muted" style={{ fontSize: '1rem' }}><IoLocationOutline />{product.producItem.location}</Card.Subtitle>
 
-              <br />
+                    <br />
                     <div style={{ display: 'flex', justifyContent: "space-between" }}>
-                      <Button variant="light" style={{backgroundColor:'#f8f8f87e'}} size="sm" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
+                      <Button variant="light" style={{ backgroundColor: '#f8f8f87e' }} size="sm" onClick={() => handleShow(product.producItem.id)}><BsEye /> Ver </Button>
                       <Link to={`/dashboardadmin/editProduct/${product.producItem.id}`}>
                         <Button variant="light" size="sm" onClick={() => handleOpenModal(product.producItem.id)}><BsPencilSquare /> Edit </Button>
                       </Link>

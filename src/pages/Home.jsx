@@ -1,5 +1,4 @@
 import Slide from "../components/Slide";
-
 import "./Stylesheet/Home.css";
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";

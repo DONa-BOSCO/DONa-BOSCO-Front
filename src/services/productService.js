@@ -3,11 +3,7 @@ import Swal from 'sweetalert2';
 
 const apiClient = axios.create({
     baseURL: 'https://localhost:7048/',
-    // withCredentials: true,
-    // headers: {
-    //     'Content-Type': 'application/json',
-    //     Accept: 'application/json'
-//      }
+  
  }
 )
 
@@ -21,7 +17,7 @@ export const productService = {
         let allProducts = await response.data;
         return allProducts.filter(product => product.producItem.isActive == true);
     },
-    
+
     async getProductsByUser(userId) {
         try {
             
@@ -52,7 +48,7 @@ export const productService = {
             method: 'post',
             headers:{
                 'Content-Type':'application/json',
-                // 'Authorization':''
+               
             }
 
         }

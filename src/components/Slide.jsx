@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import slide1 from "../assets/img-slide/slide1.png"
 import slide2 from "../assets/img-slide/slide2.png"
 import slide4 from "../assets/img-slide/slide4.png"
-import './Stylesheet/Slide.css'
+
 
 function Slide() {
   return (
