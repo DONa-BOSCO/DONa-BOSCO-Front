@@ -47,7 +47,8 @@
 <p align="center">- Visual Studio Code</p>
 <p align="center">- Visual Studio</p>
 <p align="center">- Canva</p>
-
+<p align="center">- Slack</p>
+<p align="center">- Zoom</p>
 
 
 <h2 align="center"> :computer: How to install the project (Front):</h2>
