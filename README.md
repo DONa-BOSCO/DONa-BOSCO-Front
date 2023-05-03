@@ -75,6 +75,7 @@ In the terminal run git clone command, an paste the HTTPS: https://github.com/DO
 <p align="center">- Methodology Agile with Scrum.</p>
 <p align="center">- Mob Programming.</p>
 <p align="center">- Pair Programming.</p>
+<p align="center">- Solo Programming.</p>
 
 <h2 align="center"> 👀  Testing:</h2>
 <p align="center"> npm install --save-dev vitest </p> 
@@ -84,11 +85,16 @@ In the terminal run git clone command, an paste the HTTPS: https://github.com/DO
 <p align="center">  Tested renderizaion of components (Footer, Join and Header)</p> 
 <p align="center"> Try running npm run test  </p> 
 
+<div align="center"><img src="https://user-images.githubusercontent.com/117834362/235862314-f45290dd-f9cb-4cc6-91b3-141f7c71f74d.png"></div>
+ 
+
+
+
 <h2 align="center">  🧪Next Steps:</h2>
 
-<p align="center"> - Texto </p>
-<p align="center"> - Texto </p> 
-<p align="center"> - Texto </p>  
+<p align="center"> - Implement user ratings </p>
+<p align="center"> - Statistics Implementation </p> 
+<p align="center"> - Bring user profile information from back to front </p>  
 
 
 <h2> :woman:💻Group members:</h2>
