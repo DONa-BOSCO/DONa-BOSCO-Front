@@ -12,6 +12,7 @@ import Modal from 'react-bootstrap/Modal';
 import EditProduct from '../components/EditProduct';
 import { productService } from "../services/productService";
 import { IoMdAdd } from "react-icons/io"
+import SideBar from "../components/SideBar"
 
 
 function Dashboard() {
@@ -70,6 +71,7 @@ function Dashboard() {
 
   return (
     <>
+      <SideBar />
       <div className="container-gn mt-5">
         <br />
         <h2 style={{
@@ -81,12 +83,7 @@ function Dashboard() {
               letterSpacing: '3px'
             }}>Todos los Productos</h2>
         <div className="container-bar">
-        <Link to='/AddProduct'>
-                <button className="btn3 btn-custom2  " data-tooltip="Añadir Producto"
-                  data-tooltip-location="right" style={{ borderRadius: '150px' }}>
-                  <IoMdAdd size={'25px'} style={{ position: 'relative' }} /></button>
-              </Link>
-          <input className="searchStyle" type="text" placeholder="Busca por nombre de producto o localización" value={searchQuery}
+              <input className="searchStyle" type="text" placeholder="Busca por nombre de producto o localización" value={searchQuery}
             onChange={handleSearchChange} />
 
         </div>
