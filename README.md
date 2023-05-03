@@ -96,7 +96,8 @@ In the terminal run git clone command, an paste the HTTPS: https://github.com/DO
 
 <p align="center"> - Implement user ratings </p>
 <p align="center"> - Statistics Implementation </p> 
-<p align="center"> - Bring user profile information from back to front </p>  
+<p align="center"> - Bring user profile information from Back to Front </p>  
+<p align="center"> - Sort products between Donated and Not Donated </p> 
 
 
 <h2> :woman:💻Group members:</h2>
