@@ -72,7 +72,7 @@ function EditProduct() {
       <div className="container-form">
         <form onSubmit={handleSubmit} itemID="form1">
           <h1>Editar el producto</h1>
-          <Link to="/dashboardadmin"> <button type="submit" className="btn btn-custom" id="btn" href="/dashboardadmin" > Vuelve a tu página </button> </Link>
+          <Link to="/dashboarduser"> <button type="submit" className="btn btn-custom" id="btn" href="/dashboardadmin" > Vuelve a tu página </button> </Link>
           <div className="mb-3">
             <label htmlFor="title" className="form-label">Nombre</label>
             <input name="title" type="text" className="form-control" placeholder={Product.title} onChange={handleTitleChange} />
